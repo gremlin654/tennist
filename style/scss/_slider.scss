@@ -1,0 +1,19 @@
+.slider__container {
+  display: flex;
+  justify-content: center;
+}
+.thumbnails {
+  display: flex;
+  margin: 0.8rem auto 0;
+  padding: 0;
+  justify-content: center;
+}
+.thumbnail {
+  @extend %thumbnail;
+}
+.thumbnail2 {
+  @extend %thumbnail;
+}
+.thumbnail3 {
+  @extend %thumbnail;
+}

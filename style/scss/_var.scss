@@ -1,0 +1,21 @@
+%h3text {
+  font-family: 'Bebas-Neue-bold';
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
+%thumbnail {
+  width: 6.4rem;
+  height: 6.4rem;
+  overflow: hidden;
+  list-style: none;
+  margin: 0 0.2rem;
+  cursor: pointer;
+  & img {
+    width: 100%;
+    height: auto;
+  }
+  &.is-active {
+    border: 1px solid var(--color-blue);
+  }
+}

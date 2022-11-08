@@ -1,0 +1,117 @@
+.header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  height: 5.6rem;
+  border-bottom: 0.1rem solid #5b7fbd;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2.4rem;
+    padding: 0 1.2rem;
+  }
+  &__logo-container {
+    width: 100%;
+    max-width: 12rem;
+    margin-left: 2rem;
+    margin-right: auto;
+  }
+  &__logo {
+    & img {
+      width: 12rem;
+      height: 2rem;
+    }
+  }
+  &__contacts {
+    display: flex;
+    column-gap: 0.8rem;
+  }
+  &__contacts-whatsapp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    background-color: #43d854;
+    & img {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+  }
+}
+
+.burger {
+  &__menu {
+    display: block;
+    z-index: 5;
+    position: relative;
+    width: 1.6rem;
+    height: 1.4rem;
+    cursor: pointer;
+    &-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      &-active {
+        display: block;
+        background: rgba(41, 41, 41, 0.6);
+        transition: 0.3s;
+      }
+    }
+    & span,
+    &::before,
+    &::after {
+      right: 2px;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      transition: all 0.3s ease 0s;
+      background: var(--color-white);
+    }
+    &::before,
+    &::after {
+      content: '';
+    }
+    &::before {
+      top: 0;
+      background: var(--color-white);
+    }
+    &::after {
+      bottom: 0;
+      background: var(--color-white);
+    }
+    & span {
+      padding: 0px;
+      top: 50%;
+      transform: scale(1) translate(0px, -50%);
+      background: var(--color-white);
+    }
+    &._active {
+      span {
+        transform: rotate(-90deg) translate(1px, -1px);
+      }
+      &::before {
+        top: 50%;
+        transform: rotate(-90deg) translate(1px, -11px);
+        background: var(--color-white);
+      }
+      &::after {
+        bottom: 50%;
+        transform: rotate(-90deg) translate(-1px, 9px);
+        background: var(--color-white);
+      }
+    }
+  }
+}
