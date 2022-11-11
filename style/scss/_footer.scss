@@ -1,0 +1,77 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: #0a1d3d;
+  padding: 3.2rem 1.2rem 0.8rem;
+
+  &__logo-container {
+    display: flex;
+    justify-content: center;
+  }
+  &__logo {
+    & img {
+      width: 19.7rem;
+      height: 3.2rem;
+    }
+  }
+  &__text {
+    font-family: 'Bebas-Neue-bold';
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: var(--color-white);
+    margin-top: 2.4rem;
+    text-align: center;
+  }
+  &__phones-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.6rem;
+  }
+  &__phone {
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+  }
+  &__phone-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  &__phone-number {
+    font-family: 'Montserrat-Bold';
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    color: var(--color-white);
+  }
+  &__phone-callback {
+    @extend %buttonOrange;
+    width: 15.2rem;
+    height: 4rem;
+  }
+  &__messangers-container {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.6rem;
+    margin: 1.6rem 0 2.4rem;
+  }
+  &__whatsapp {
+    @extend %socialFooter;
+    width: 13.6rem;
+    background-color: #43d854;
+  }
+  &__telegram {
+    @extend %socialFooter;
+    width: 12.7rem;
+    background-color: #28a8ea;
+  }
+  &__text-info {
+    padding-top: 0.8rem;
+    border-top: 0.1rem solid var(--color-blue);
+    font-family: 'Montserrat-Regular';
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    text-align: center;
+    color: var(--color-white);
+  }
+}

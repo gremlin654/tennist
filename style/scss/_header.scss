@@ -8,7 +8,14 @@
   right: 0;
   z-index: 5;
   height: 5.6rem;
-  border-bottom: 0.1rem solid #5b7fbd;
+  border-bottom: 0.1rem solid var(--color-blue);
+  &.active {
+    background-color: var(--color-blue-dark);
+  }
+  &.active-menu-burger {
+    background-color: var(--color-blue-dark);
+    border-bottom: 0;
+  }
   &__container {
     display: flex;
     align-items: center;
@@ -34,17 +41,110 @@
     column-gap: 0.8rem;
   }
   &__contacts-whatsapp {
-    display: flex;
+    @extend %socialHeader;
+    background-color: #43d854;
+  }
+  &__contacts-telegram {
+    @extend %socialHeader;
+    background-color: #28a8ea;
+  }
+  &__contacts-callback {
+    @extend %socialHeader;
+    background-color: var(--color-orange);
+  }
+  &__contacts-phone {
+    display: none;
+    align-items: center;
+    column-gap: 0.8rem;
+  }
+  &__contacts-phone-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  &__contacts-phone-number {
+    font-family: 'Montserrat-Bold';
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    color: var(--color-white);
+  }
+  &__contacts-callback-text,
+  &__contacts-telegram-text,
+  &__contacts-whatsapp-text {
+    display: none;
+  }
+}
+
+.menu {
+  &__list {
+    flex-direction: column;
+    position: fixed;
+    top: 5.6rem;
+    left: -100%;
+    width: 100%;
+    height: calc(100% - 5.6rem);
+    max-width: 100%;
+    transition: left 0.3s ease 0s;
     justify-content: center;
     align-items: center;
-    width: 2.4rem;
-    height: 2.4rem;
-    border-radius: 50%;
-    background-color: #43d854;
-    & img {
-      width: 1.2rem;
-      height: 1.2rem;
+    align-content: center;
+    flex-wrap: nowrap;
+    gap: 40px;
+    z-index: 2;
+    overflow: auto;
+    &.active {
+      left: 0;
     }
+  }
+  &__item {
+    height: 6.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 0.1rem solid var(--color-blue);
+    padding: 0;
+    background-color: var(--color-blue-dark);
+  }
+  &__link {
+    font-family: 'SourceSansPro-SemiBold';
+    text-transform: uppercase;
+    color: var(--color-white);
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+  &__contacts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.6rem;
+    padding: 3.9rem 0 3.2rem;
+    background-color: var(--color-blue-dark);
+  }
+  &__phone {
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+  }
+  &__phone-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  &__phone-number {
+    font-family: 'SourceSansPro-Bold';
+    font-size: 2rem;
+    line-height: 3.2rem;
+    color: var(--color-white);
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18.5rem;
+    height: 4.7rem;
+    background-color: var(--color-orange);
+    font-family: 'SourceSansPro-Bold';
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    color: var(--color-white);
   }
 }
 
@@ -59,9 +159,9 @@
     &-overlay {
       display: none;
       position: fixed;
-      top: 0;
+      bottom: 0;
       left: 0;
-      height: 100%;
+      height: calc(100% - 5.6rem);
       width: 100%;
       z-index: 1;
       &-active {
@@ -98,18 +198,19 @@
       transform: scale(1) translate(0px, -50%);
       background: var(--color-white);
     }
-    &._active {
+    &.active-burger {
       span {
+        display: none;
         transform: rotate(-90deg) translate(1px, -1px);
       }
       &::before {
         top: 50%;
-        transform: rotate(-90deg) translate(1px, -11px);
+        transform: rotate(45deg) translate(-0.15rem, 0rem);
         background: var(--color-white);
       }
       &::after {
         bottom: 50%;
-        transform: rotate(-90deg) translate(-1px, 9px);
+        transform: rotate(-45deg) translate(-0.095rem, 0px);
         background: var(--color-white);
       }
     }

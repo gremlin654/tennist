@@ -1,0 +1,99 @@
+.modal {
+  &__form-callback,
+  &__form-request {
+    @extend %modal;
+  }
+  &__form-container {
+    position: relative;
+    max-width: 47.2rem;
+    max-height: 49.2rem;
+    background: var(--color-white);
+    box-shadow: -2px 5px 40px rgba(31, 60, 109, 0.16);
+    padding: 4rem;
+  }
+  &__form-title {
+    font-family: 'Bebas-Neue-bold';
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    text-align: center;
+  }
+  &__form-sub-title {
+    font-family: 'Montserrat-Regular';
+    font-size: 1.53rem;
+    line-height: 2.4rem;
+    margin-top: 1.6rem;
+    text-align: center;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.4rem;
+    padding: 0 4.6rem;
+  }
+}
+
+.form-callback {
+  &__input-phone-container,
+  &__input-email-container {
+    margin-top: 0.8rem;
+    position: relative;
+  }
+  &__input-name-container {
+    position: relative;
+  }
+  &__input-phone-container,
+  &__input-email-container,
+  &__input-name-container,
+  &__select-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
+  }
+  &__input-phone-container,
+  &__input-email-container,
+  &__select-container {
+    margin-top: 1.6rem;
+  }
+  &__input-name,
+  &__input-phone,
+  &__input-email {
+    background: #f5f4f0;
+    border: 1px solid #cacaca;
+    width: 100%;
+    height: 4rem;
+    padding: 0 1rem 0 4rem;
+  }
+  &__input-name-text,
+  &__input-email-text,
+  &__input-phone-text,
+  &__select-text {
+    @extend %inputText;
+    color: #cacaca;
+  }
+  &__input-icon {
+    @extend %inputIcon;
+  }
+
+  &__select {
+    background: #f5f4f0;
+    border: 1px solid #cacaca;
+    width: 100%;
+    height: 4rem;
+    padding: 0 2rem;
+  }
+  &__button {
+    @extend %buttonOrange;
+    margin: 2.4rem auto 0;
+  }
+  &__close-icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    top: 1.6rem;
+    right: 1.6rem;
+    & img {
+      width: 100%;
+    }
+  }
+}

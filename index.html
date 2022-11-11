@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preload" href="./fonts/woff2/Montserrat-Regular.woff2" as="font" crossorigin />
+    <link rel="preload" href="./fonts/woff2/Montserrat-Medium.woff2" as="font" crossorigin />
+    <link rel="preload" href="./fonts/woff2/Montserrat-Bold.woff2" as="font" crossorigin />
+    <link rel="preload" href="./fonts/woff2/SourceSansPro-Regular.woff2" as="font" crossorigin />
+    <link rel="preload" href="./fonts/woff2/SourceSansPro-SemiBold.woff2" as="font" crossorigin />
+    <link rel="preload" href="./fonts/woff2/SourceSansPro-Bold.woff2" as="font" crossorigin />
+    <link rel="preload" href="./fonts/woff2/bebas-neue-bold.woff2" as="font" crossorigin />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css"
@@ -26,20 +32,62 @@
             </div>
             <div class="burger__menu-overlay"></div>
           </div>
+          <ul class="menu__list">
+            <div class="menu__contacts-container">
+              <div class="menu__phone">
+                <img class="menu__phone-icon" src="./image/svg/phone-call-white.svg" alt="phone" />
+                <p class="menu__phone-number">8 (495) 108-04-50</p>
+              </div>
+              <button class="menu__button" data-call="callback">ЗАКАЗАТЬ ЗВОНОК</button>
+            </div>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Теннисные мячи</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Одежда</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Обувь</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Доставка и оплата</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Контакты</a>
+            </li>
+          </ul>
           <div class="header__logo-container">
             <a class="header__logo" href="">
               <img src="./image/svg/logo.svg" alt="logo" />
             </a>
           </div>
           <div class="header__contacts">
-            <a class="header__contacts-whatsapp" href="">
+            <a class="header__contacts-whatsapp" href="https://www.whatsapp.com/">
               <img src="./image/svg/whatsapp.svg" alt="whatsapp" />
+              <p class="header__contacts-whatsapp-text">Whatsapp</p>
             </a>
-            <a href="">
-              <img src="./image/svg/telegram.svg" alt="telegram" />
+            <a class="header__contacts-telegram" href="https://telegram.org/">
+              <img src="./image/svg/artboard.svg" alt="telegram" />
+              <p class="header__contacts-telegram-text">Telegram</p>
             </a>
-            <a href="">
-              <img src="./image/svg/phone.svg" alt="phone" />
+            <div class="header__contacts-phone">
+              <img
+                class="header__contacts-phone-icon"
+                src="./image/svg/phone-call-white.svg"
+                alt="phone"
+              />
+              <a class="header__contacts-phone-number" href="tel:+7951080450">8 (495) 108-04-50</a>
+            </div>
+            <a class="header__contacts-callback" href="tel:+7951080450">
+              <img
+                class="header__contacts-callback-image"
+                src="./image/svg/phone-call-white.svg"
+                alt="phone"
+              />
+              <p class="header__contacts-callback-text">ЗАКАЗАТЬ ЗВОНОК</p>
             </a>
           </div>
         </div>
@@ -114,109 +162,113 @@
             </div>
           </div>
           <div class="product__container">
-            <div class="slider__container">
-              <div id="slider1" class="splide" aria-label="My Awesome Gallery">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <picture>
-                        <source
-                          srcset="./image/webp/slide1.webp"
-                          type="image/webp"
-                          style="width: 100%; height: 100%"
-                        />
-                        <img
-                          src="./image/png/slide1.png"
-                          loading="lazy"
-                          alt="slide"
-                          style="width: 100%; height: 100%"
-                        />
-                      </picture>
-                    </li>
-                    <li class="splide__slide">
-                      <picture>
-                        <source
-                          srcset="./image/webp/slide2.webp"
-                          type="image/webp"
-                          style="width: 100%; height: 100%"
-                        />
-                        <img
-                          src="./image/png/slide2.png"
-                          loading="lazy"
-                          alt="slide"
-                          style="width: 100%; height: 100%"
-                        />
-                      </picture>
-                    </li>
-                    <li class="splide__slide">
-                      <picture>
-                        <source
-                          srcset="./image/webp/slide3.webp"
-                          type="image/webp"
-                          style="width: 100%; height: 100%"
-                        />
-                        <img
-                          src="./image/png/slide3.png"
-                          loading="lazy"
-                          alt="slide"
-                          style="width: 100%; height: 100%"
-                        />
-                      </picture>
-                    </li>
-                    <li class="splide__slide">
-                      <picture>
-                        <source
-                          srcset="./image/webp/slide4.webp"
-                          type="image/webp"
-                          style="width: 100%; height: 100%"
-                        />
-                        <img
-                          src="./image/png/slide4.png"
-                          loading="lazy"
-                          alt="slide"
-                          style="width: 100%; height: 100%"
-                        />
-                      </picture>
-                    </li>
-                  </ul>
+            <div class="slider__wrapper">
+              <div class="slider__container">
+                <div id="slider1" class="splide" aria-label="My Awesome Gallery">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      <li class="splide__slide">
+                        <picture>
+                          <source
+                            srcset="./image/webp/slide1.webp"
+                            type="image/webp"
+                            style="width: 100%; height: 100%"
+                          />
+                          <img
+                            src="./image/png/slide1.png"
+                            loading="lazy"
+                            alt="slide"
+                            style="width: 100%; height: 100%"
+                          />
+                        </picture>
+                      </li>
+                      <li class="splide__slide">
+                        <picture>
+                          <source
+                            srcset="./image/webp/slide2.webp"
+                            type="image/webp"
+                            style="width: 100%; height: 100%"
+                          />
+                          <img
+                            src="./image/png/slide2.png"
+                            loading="lazy"
+                            alt="slide"
+                            style="width: 100%; height: 100%"
+                          />
+                        </picture>
+                      </li>
+                      <li class="splide__slide">
+                        <picture>
+                          <source
+                            srcset="./image/webp/slide3.webp"
+                            type="image/webp"
+                            style="width: 100%; height: 100%"
+                          />
+                          <img
+                            src="./image/png/slide3.png"
+                            loading="lazy"
+                            alt="slide"
+                            style="width: 100%; height: 100%"
+                          />
+                        </picture>
+                      </li>
+                      <li class="splide__slide">
+                        <picture>
+                          <source
+                            srcset="./image/webp/slide4.webp"
+                            type="image/webp"
+                            style="width: 100%; height: 100%"
+                          />
+                          <img
+                            src="./image/png/slide4.png"
+                            loading="lazy"
+                            alt="slide"
+                            style="width: 100%; height: 100%"
+                          />
+                        </picture>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <ul id="thumbnails" class="thumbnails">
-              <li class="thumbnail">
-                <picture>
-                  <source srcset="./image/webp/slide1.webp" type="image/webp" />
-                  <img src="./image/png/slide1.png" loading="lazy" alt="slide" />
-                </picture>
-              </li>
-              <li class="thumbnail">
-                <picture>
-                  <source srcset="./image/webp/slide2.webp" type="image/webp" />
-                  <img src="./image/png/slide2.png" loading="lazy" alt="slide" />
-                </picture>
-              </li>
-              <li class="thumbnail">
-                <picture>
-                  <source srcset="./image/webp/slide3.webp" type="image/webp" />
-                  <img src="./image/png/slide3.png" loading="lazy" alt="slide" />
-                </picture>
-              </li>
-              <li class="thumbnail">
-                <picture>
-                  <source srcset="./image/webp/slide4.webp" type="image/webp" />
-                  <img src="./image/png/slide4.png" loading="lazy" alt="slide" />
-                </picture>
-              </li>
-            </ul>
-            <h3 class="product__title">Теннисные мячи babolat gold all court в коробе (72 мяча)</h3>
-            <div class="product__status-container">
-              <div class="product__conditional-container">
-                <p class="product__status-vector">✔</p>
-                <p class="product__status">В наличии</p>
-              </div>
-              <p class="product__status">Арт.: BUCB18BK</p>
+              <ul id="thumbnails" class="thumbnails">
+                <li class="thumbnail">
+                  <picture>
+                    <source srcset="./image/webp/slide1.webp" type="image/webp" />
+                    <img src="./image/png/slide1.png" loading="lazy" alt="slide" />
+                  </picture>
+                </li>
+                <li class="thumbnail">
+                  <picture>
+                    <source srcset="./image/webp/slide2.webp" type="image/webp" />
+                    <img src="./image/png/slide2.png" loading="lazy" alt="slide" />
+                  </picture>
+                </li>
+                <li class="thumbnail">
+                  <picture>
+                    <source srcset="./image/webp/slide3.webp" type="image/webp" />
+                    <img src="./image/png/slide3.png" loading="lazy" alt="slide" />
+                  </picture>
+                </li>
+                <li class="thumbnail">
+                  <picture>
+                    <source srcset="./image/webp/slide4.webp" type="image/webp" />
+                    <img src="./image/png/slide4.png" loading="lazy" alt="slide" />
+                  </picture>
+                </li>
+              </ul>
             </div>
             <div class="product__description-container">
+              <h3 class="product__title">
+                Теннисные мячи babolat gold all court в коробе (72 мяча)
+              </h3>
+              <div class="product__status-container">
+                <div class="product__conditional-container">
+                  <p class="product__status-vector">✔</p>
+                  <p class="product__status">В наличии</p>
+                </div>
+                <p class="product__status">Арт.: BUCB18BK</p>
+              </div>
               <p class="product__description-text" id="description-text">
                 Unlimited Code Black – это теннисный мяч премиум-класса из высококачественного
                 материала. Отлично подойдет для соревнований и регулярных тренировок на самом
@@ -229,118 +281,126 @@
                 <p>Подробнее</p>
                 <p>▼</p>
               </div>
+            </div>
+            <div class="product__price-wrapper">
               <div class="product__price-container">
                 <p class="product__price">15 900 ₽</p>
                 <p class="product__price-availability">/1 коробка</p>
               </div>
               <h5 class="product__opt">от 5 коробок - ЦЕНА ДОГОВОРНАЯ</h5>
-              <button class="product__callback-button">ОСТАВИТЬ ЗАЯВКУ</button>
+              <button class="product__callback-button" data-request="request">
+                ОСТАВИТЬ ЗАЯВКУ
+              </button>
             </div>
           </div>
           <div class="product__container">
-            <div class="slider__container">
-              <div id="slider2" class="splide" aria-label="My Awesome Gallery">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <picture>
-                        <source
-                          srcset="./image/webp/slide1.webp"
-                          type="image/webp"
-                          style="width: 100%; height: 100%"
-                        />
-                        <img
-                          src="./image/png/slide1.png"
-                          loading="lazy"
-                          alt="slide"
-                          style="width: 100%; height: 100%"
-                        />
-                      </picture>
-                    </li>
-                    <li class="splide__slide">
-                      <picture>
-                        <source
-                          srcset="./image/webp/slide2.webp"
-                          type="image/webp"
-                          style="width: 100%; height: 100%"
-                        />
-                        <img
-                          src="./image/png/slide2.png"
-                          loading="lazy"
-                          alt="slide"
-                          style="width: 100%; height: 100%"
-                        />
-                      </picture>
-                    </li>
-                    <li class="splide__slide">
-                      <picture>
-                        <source
-                          srcset="./image/webp/slide3.webp"
-                          type="image/webp"
-                          style="width: 100%; height: 100%"
-                        />
-                        <img
-                          src="./image/png/slide3.png"
-                          loading="lazy"
-                          alt="slide"
-                          style="width: 100%; height: 100%"
-                        />
-                      </picture>
-                    </li>
-                    <li class="splide__slide">
-                      <picture>
-                        <source
-                          srcset="./image/webp/slide4.webp"
-                          type="image/webp"
-                          style="width: 100%; height: 100%"
-                        />
-                        <img
-                          src="./image/png/slide4.png"
-                          loading="lazy"
-                          alt="slide"
-                          style="width: 100%; height: 100%"
-                        />
-                      </picture>
-                    </li>
-                  </ul>
+            <div class="slider__wrapper">
+              <div class="slider__container">
+                <div id="slider2" class="splide" aria-label="My Awesome Gallery">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      <li class="splide__slide">
+                        <picture>
+                          <source
+                            srcset="./image/webp/slide1.webp"
+                            type="image/webp"
+                            style="width: 100%; height: 100%"
+                          />
+                          <img
+                            src="./image/png/slide1.png"
+                            loading="lazy"
+                            alt="slide"
+                            style="width: 100%; height: 100%"
+                          />
+                        </picture>
+                      </li>
+                      <li class="splide__slide">
+                        <picture>
+                          <source
+                            srcset="./image/webp/slide2.webp"
+                            type="image/webp"
+                            style="width: 100%; height: 100%"
+                          />
+                          <img
+                            src="./image/png/slide2.png"
+                            loading="lazy"
+                            alt="slide"
+                            style="width: 100%; height: 100%"
+                          />
+                        </picture>
+                      </li>
+                      <li class="splide__slide">
+                        <picture>
+                          <source
+                            srcset="./image/webp/slide3.webp"
+                            type="image/webp"
+                            style="width: 100%; height: 100%"
+                          />
+                          <img
+                            src="./image/png/slide3.png"
+                            loading="lazy"
+                            alt="slide"
+                            style="width: 100%; height: 100%"
+                          />
+                        </picture>
+                      </li>
+                      <li class="splide__slide">
+                        <picture>
+                          <source
+                            srcset="./image/webp/slide4.webp"
+                            type="image/webp"
+                            style="width: 100%; height: 100%"
+                          />
+                          <img
+                            src="./image/png/slide4.png"
+                            loading="lazy"
+                            alt="slide"
+                            style="width: 100%; height: 100%"
+                          />
+                        </picture>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <ul id="thumbnails" class="thumbnails">
-              <li class="thumbnail2">
-                <picture>
-                  <source srcset="./image/webp/slide1.webp" type="image/webp" />
-                  <img src="./image/png/slide1.png" loading="lazy" alt="slide" />
-                </picture>
-              </li>
-              <li class="thumbnail2">
-                <picture>
-                  <source srcset="./image/webp/slide2.webp" type="image/webp" />
-                  <img src="./image/png/slide2.png" loading="lazy" alt="slide" />
-                </picture>
-              </li>
-              <li class="thumbnail2">
-                <picture>
-                  <source srcset="./image/webp/slide3.webp" type="image/webp" />
-                  <img src="./image/png/slide3.png" loading="lazy" alt="slide" />
-                </picture>
-              </li>
-              <li class="thumbnail2">
-                <picture>
-                  <source srcset="./image/webp/slide4.webp" type="image/webp" />
-                  <img src="./image/png/slide4.png" loading="lazy" alt="slide" />
-                </picture>
-              </li>
-            </ul>
-            <h3 class="product__title">Теннисные мячи babolat gold all court в коробе (72 мяча)</h3>
-            <div class="product__status-container">
-              <div class="product__conditional-container">
-                <p class="product__status-vector">✔</p>
-                <p class="product__status">В наличии</p>
-              </div>
-              <p class="product__status">Арт.: BUCB18BK</p>
+              <ul id="thumbnails" class="thumbnails">
+                <li class="thumbnail2">
+                  <picture>
+                    <source srcset="./image/webp/slide1.webp" type="image/webp" />
+                    <img src="./image/png/slide1.png" loading="lazy" alt="slide" />
+                  </picture>
+                </li>
+                <li class="thumbnail2">
+                  <picture>
+                    <source srcset="./image/webp/slide2.webp" type="image/webp" />
+                    <img src="./image/png/slide2.png" loading="lazy" alt="slide" />
+                  </picture>
+                </li>
+                <li class="thumbnail2">
+                  <picture>
+                    <source srcset="./image/webp/slide3.webp" type="image/webp" />
+                    <img src="./image/png/slide3.png" loading="lazy" alt="slide" />
+                  </picture>
+                </li>
+                <li class="thumbnail2">
+                  <picture>
+                    <source srcset="./image/webp/slide4.webp" type="image/webp" />
+                    <img src="./image/png/slide4.png" loading="lazy" alt="slide" />
+                  </picture>
+                </li>
+              </ul>
             </div>
             <div class="product__description-container">
+              <h3 class="product__title">
+                Теннисные мячи babolat gold all court в коробе (72 мяча)
+              </h3>
+              <div class="product__status-container">
+                <div class="product__conditional-container">
+                  <p class="product__status-vector">✔</p>
+                  <p class="product__status">В наличии</p>
+                </div>
+                <p class="product__status">Арт.: BUCB18BK</p>
+              </div>
               <p class="product__description-text" id="description-text2">
                 Unlimited Code Black – это теннисный мяч премиум-класса из высококачественного
                 материала. Отлично подойдет для соревнований и регулярных тренировок на самом
@@ -353,118 +413,126 @@
                 <p>Подробнее</p>
                 <p>▼</p>
               </div>
+            </div>
+            <div class="product__price-wrapper">
               <div class="product__price-container">
                 <p class="product__price">15 900 ₽</p>
                 <p class="product__price-availability">/1 коробка</p>
               </div>
               <h5 class="product__opt">от 5 коробок - ЦЕНА ДОГОВОРНАЯ</h5>
-              <button class="product__callback-button">ОСТАВИТЬ ЗАЯВКУ</button>
+              <button class="product__callback-button" data-request="request">
+                ОСТАВИТЬ ЗАЯВКУ
+              </button>
             </div>
           </div>
           <div class="product__container">
-            <div class="slider__container">
-              <div id="slider3" class="splide" aria-label="My Awesome Gallery">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <picture>
-                        <source
-                          srcset="./image/webp/slide1.webp"
-                          type="image/webp"
-                          style="width: 100%; height: 100%"
-                        />
-                        <img
-                          src="./image/png/slide1.png"
-                          loading="lazy"
-                          alt="slide"
-                          style="width: 100%; height: 100%"
-                        />
-                      </picture>
-                    </li>
-                    <li class="splide__slide">
-                      <picture>
-                        <source
-                          srcset="./image/webp/slide2.webp"
-                          type="image/webp"
-                          style="width: 100%; height: 100%"
-                        />
-                        <img
-                          src="./image/png/slide2.png"
-                          loading="lazy"
-                          alt="slide"
-                          style="width: 100%; height: 100%"
-                        />
-                      </picture>
-                    </li>
-                    <li class="splide__slide">
-                      <picture>
-                        <source
-                          srcset="./image/webp/slide3.webp"
-                          type="image/webp"
-                          style="width: 100%; height: 100%"
-                        />
-                        <img
-                          src="./image/png/slide3.png"
-                          loading="lazy"
-                          alt="slide"
-                          style="width: 100%; height: 100%"
-                        />
-                      </picture>
-                    </li>
-                    <li class="splide__slide">
-                      <picture>
-                        <source
-                          srcset="./image/webp/slide4.webp"
-                          type="image/webp"
-                          style="width: 100%; height: 100%"
-                        />
-                        <img
-                          src="./image/png/slide4.png"
-                          loading="lazy"
-                          alt="slide"
-                          style="width: 100%; height: 100%"
-                        />
-                      </picture>
-                    </li>
-                  </ul>
+            <div class="slider__wrapper">
+              <div class="slider__container">
+                <div id="slider3" class="splide" aria-label="My Awesome Gallery">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      <li class="splide__slide">
+                        <picture>
+                          <source
+                            srcset="./image/webp/slide1.webp"
+                            type="image/webp"
+                            style="width: 100%; height: 100%"
+                          />
+                          <img
+                            src="./image/png/slide1.png"
+                            loading="lazy"
+                            alt="slide"
+                            style="width: 100%; height: 100%"
+                          />
+                        </picture>
+                      </li>
+                      <li class="splide__slide">
+                        <picture>
+                          <source
+                            srcset="./image/webp/slide2.webp"
+                            type="image/webp"
+                            style="width: 100%; height: 100%"
+                          />
+                          <img
+                            src="./image/png/slide2.png"
+                            loading="lazy"
+                            alt="slide"
+                            style="width: 100%; height: 100%"
+                          />
+                        </picture>
+                      </li>
+                      <li class="splide__slide">
+                        <picture>
+                          <source
+                            srcset="./image/webp/slide3.webp"
+                            type="image/webp"
+                            style="width: 100%; height: 100%"
+                          />
+                          <img
+                            src="./image/png/slide3.png"
+                            loading="lazy"
+                            alt="slide"
+                            style="width: 100%; height: 100%"
+                          />
+                        </picture>
+                      </li>
+                      <li class="splide__slide">
+                        <picture>
+                          <source
+                            srcset="./image/webp/slide4.webp"
+                            type="image/webp"
+                            style="width: 100%; height: 100%"
+                          />
+                          <img
+                            src="./image/png/slide4.png"
+                            loading="lazy"
+                            alt="slide"
+                            style="width: 100%; height: 100%"
+                          />
+                        </picture>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <ul id="thumbnails" class="thumbnails">
-              <li class="thumbnail3">
-                <picture>
-                  <source srcset="./image/webp/slide1.webp" type="image/webp" />
-                  <img src="./image/png/slide1.png" loading="lazy" alt="slide" />
-                </picture>
-              </li>
-              <li class="thumbnail3">
-                <picture>
-                  <source srcset="./image/webp/slide2.webp" type="image/webp" />
-                  <img src="./image/png/slide2.png" loading="lazy" alt="slide" />
-                </picture>
-              </li>
-              <li class="thumbnail3">
-                <picture>
-                  <source srcset="./image/webp/slide3.webp" type="image/webp" />
-                  <img src="./image/png/slide3.png" loading="lazy" alt="slide" />
-                </picture>
-              </li>
-              <li class="thumbnail3">
-                <picture>
-                  <source srcset="./image/webp/slide4.webp" type="image/webp" />
-                  <img src="./image/png/slide4.png" loading="lazy" alt="slide" />
-                </picture>
-              </li>
-            </ul>
-            <h3 class="product__title">Теннисные мячи babolat gold all court в коробе (72 мяча)</h3>
-            <div class="product__status-container">
-              <div class="product__conditional-container">
-                <p class="product__status-vector">✔</p>
-                <p class="product__status">В наличии</p>
-              </div>
-              <p class="product__status">Арт.: BUCB18BK</p>
+              <ul id="thumbnails" class="thumbnails">
+                <li class="thumbnail3">
+                  <picture>
+                    <source srcset="./image/webp/slide1.webp" type="image/webp" />
+                    <img src="./image/png/slide1.png" loading="lazy" alt="slide" />
+                  </picture>
+                </li>
+                <li class="thumbnail3">
+                  <picture>
+                    <source srcset="./image/webp/slide2.webp" type="image/webp" />
+                    <img src="./image/png/slide2.png" loading="lazy" alt="slide" />
+                  </picture>
+                </li>
+                <li class="thumbnail3">
+                  <picture>
+                    <source srcset="./image/webp/slide3.webp" type="image/webp" />
+                    <img src="./image/png/slide3.png" loading="lazy" alt="slide" />
+                  </picture>
+                </li>
+                <li class="thumbnail3">
+                  <picture>
+                    <source srcset="./image/webp/slide4.webp" type="image/webp" />
+                    <img src="./image/png/slide4.png" loading="lazy" alt="slide" />
+                  </picture>
+                </li>
+              </ul>
             </div>
             <div class="product__description-container">
+              <h3 class="product__title">
+                Теннисные мячи babolat gold all court в коробе (72 мяча)
+              </h3>
+              <div class="product__status-container">
+                <div class="product__conditional-container">
+                  <p class="product__status-vector">✔</p>
+                  <p class="product__status">В наличии</p>
+                </div>
+                <p class="product__status">Арт.: BUCB18BK</p>
+              </div>
               <p class="product__description-text" id="description-text3">
                 Unlimited Code Black – это теннисный мяч премиум-класса из высококачественного
                 материала. Отлично подойдет для соревнований и регулярных тренировок на самом
@@ -477,16 +545,140 @@
                 <p>Подробнее</p>
                 <p>▼</p>
               </div>
+            </div>
+            <div class="product__price-wrapper">
               <div class="product__price-container">
                 <p class="product__price">15 900 ₽</p>
                 <p class="product__price-availability">/1 коробка</p>
               </div>
               <h5 class="product__opt">от 5 коробок - ЦЕНА ДОГОВОРНАЯ</h5>
-              <button class="product__callback-button">ОСТАВИТЬ ЗАЯВКУ</button>
+              <button class="product__callback-button" data-request="request">
+                ОСТАВИТЬ ЗАЯВКУ
+              </button>
             </div>
           </div>
         </section>
+        <section class="form-block__container">
+          <h3 class="form-block__title">Вас интересует какой-нибудь другой товар для тенниса?</h3>
+          <h4 class="form-block__sub-title">
+            оставьте Ваши контактные данные и с Вами свяжется наш менеджер
+          </h4>
+          <div class="form-block__form-container">
+            <form class="form-block__form">
+              <div class="form__textarea-container">
+                <p class="form__textarea-text">Введите Ваше сообщение</p>
+                <textarea class="form__textarea" required></textarea>
+              </div>
+              <div class="form__input-name-container">
+                <p class="form__input-name-text">Ваше имя</p>
+                <input class="form__input-name" type="text" required />
+                <img class="form__input-icon" src="./image/svg/user.svg" alt="user" />
+              </div>
+              <div class="form__input-phone-container">
+                <p class="form__input-phone-text">Номер телефона</p>
+                <input class="form__input-phone" type="text" required />
+                <img class="form__input-icon" src="./image/svg/phone-call.svg" alt="phone-call" />
+              </div>
+              <button type="submit" class="form__button">Отправить</button>
+            </form>
+          </div>
+        </section>
       </main>
+      <footer class="footer">
+        <div class="footer__logo-container">
+          <a class="footer__logo" href="#">
+            <img src="./image/svg/logo.svg" alt="logo" />
+          </a>
+        </div>
+        <p class="footer__text">Бесплатная доставка от 5 коробок мячей</p>
+        <div class="footer__phones-container">
+          <div class="footer__phone">
+            <img class="footer__phone-icon" src="./image/svg/phone-call-white.svg" alt="phone" />
+            <a class="footer__phone-number" href="tel:+7951080450">8 (495) 108-04-50</a>
+          </div>
+          <button class="footer__phone-callback" data-call="callback">ЗАКАЗАТЬ ЗВОНОК</button>
+        </div>
+        <div class="footer__messangers-container">
+          <a class="footer__whatsapp" href="https://www.whatsapp.com/">
+            <img src="./image/svg/whatsapp.svg" alt="whatsapp" />
+            <p>Whatsapp</p>
+          </a>
+          <a class="footer__telegram" href="https://telegram.org/">
+            <img src="./image/svg/artboard.svg" alt="telegram" />
+            <p>Telegram</p>
+          </a>
+        </div>
+        <p class="footer__text-info">
+          Данный информационный ресурс не является публичной офертой. Наличие и стоимость товаров
+          уточняйте по телефону. Производители оставляют за собой право изменять технические
+          характеристики и внешний вид товаров без предварительного уведомления.
+        </p>
+      </footer>
+      <div class="modal__form-callback">
+        <div class="modal__form-container">
+          <button class="form-callback__close-icon" data-close="close">
+            <img src="./image/svg/close.svg" alt="user" />
+          </button>
+          <h3 class="modal__form-title">Оставьте свои контактные данные</h3>
+          <h4 class="modal__form-sub-title">Менеджер свяжется с Вами в ближайшее время</h4>
+          <form class="modal__form">
+            <div class="form-callback__input-name-container">
+              <p class="form-callback__input-name-text">Ваше имя</p>
+              <input class="form-callback__input-name" type="text" required />
+              <img class="form-callback__input-icon" src="./image/svg/user.svg" alt="user" />
+            </div>
+            <div class="form-callback__input-phone-container">
+              <p class="form-callback__input-phone-text">Номер телефона</p>
+              <input class="form-callback__input-phone" type="text" required />
+              <img
+                class="form-callback__input-icon"
+                src="./image/svg/phone-call.svg"
+                alt="phone-call"
+              />
+            </div>
+            <div class="form-callback__input-email-container">
+              <p class="form-callback__input-email-text">E-mail</p>
+              <input class="form-callback__input-email" type="text" required />
+              <img class="form-callback__input-icon" src="./image/svg/email.svg" alt="email" />
+            </div>
+            <button type="submit" class="form-callback__button">Отправить</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal__form-request">
+        <div class="modal__form-container">
+          <button class="form-callback__close-icon" data-close="close">
+            <img src="./image/svg/close.svg" alt="user" />
+          </button>
+          <h3 class="modal__form-title">Оставьте свои контактные данные</h3>
+          <h4 class="modal__form-sub-title">Менеджер свяжется с Вами в ближайшее время</h4>
+          <form class="modal__form">
+            <div class="form-callback__input-name-container">
+              <p class="form-callback__input-name-text">Ваше имя</p>
+              <input class="form-callback__input-name" type="text" required />
+              <img class="form-callback__input-icon" src="./image/svg/user.svg" alt="user" />
+            </div>
+            <div class="form-callback__input-phone-container">
+              <p class="form-callback__input-phone-text">Номер телефона</p>
+              <input class="form-callback__input-phone" type="text" required />
+              <img
+                class="form-callback__input-icon"
+                src="./image/svg/phone-call.svg"
+                alt="phone-call"
+              />
+            </div>
+            <div class="form-callback__select-container">
+              <p class="form-callback__select-text">Количество</p>
+              <select class="form-callback__select" required>
+                <option value="" hidden>Какое количество мячей Вам нужно?</option>
+                <option value="1 коробка">1 коробка</option>
+                <option value="от 5 коробок">от 5 коробок</option>
+              </select>
+            </div>
+            <button type="submit" class="form-callback__button">Отправить</button>
+          </form>
+        </div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
     <script src="./js/index.js" type="module"></script>

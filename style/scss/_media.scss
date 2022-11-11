@@ -1,1 +1,319 @@
+@media (max-width: 335px) {
+  .footer__phone-number {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 360px) {
+  .first-block__container {
+    background-image: url(./../../image/jpg/baner-576.jpg);
+  }
+  .first-block__benefits-wrapper {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .form-block__container {
+    background: url(./../../image/jpg/girl-576.jpg) center no-repeat;
+  }
+  .footer__phones-container {
+    gap: 1.6rem;
+    justify-content: center;
+  }
+}
+@media (min-width: 403px) {
+  .product__description-text {
+    height: 10rem;
+  }
+}
+@media (min-width: 527px) {
+  .product__description-text {
+    height: 7rem;
+  }
+}
+@media (min-width: 576px) {
+  .first-block__container {
+    background-image: url(./../../image/jpg/baner-768.jpg);
+  }
+  .form-block__container {
+    background: url(./../../image/jpg/girl-768.jpg) center no-repeat;
+  }
+  .sort__container {
+    justify-content: flex-start;
+    gap: 3.2rem;
+  }
+}
+@media (min-width: 726px) {
+  .product__description-text {
+    height: 5rem;
+  }
+}
+@media (min-width: 768px) {
+  .menu__list {
+    top: 8rem;
+    height: calc(100% - 8rem);
+  }
+  .burger {
+    &__menu-overlay {
+      height: calc(100% - 8rem);
+    }
+    &__menu {
+      width: 3.2rem;
+      height: 2.8rem;
+    }
+  }
+  .brend-block__item-container {
+    height: 6.4rem;
+    max-width: 27.4rem;
+  }
+  .header {
+    height: 8rem;
 
+    &__logo img {
+      width: 19.7rem;
+      height: 3.2rem;
+    }
+    &__contacts-callback,
+    &__contacts-telegram,
+    &__contacts-whatsapp {
+      width: 4rem;
+      height: 4rem;
+    }
+    &__contacts-callback,
+    &__contacts-telegram,
+    &__contacts-whatsapp {
+      & img {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+    }
+  }
+  .first-block__container {
+    background-image: url(./../../image/jpg/baner-992.jpg);
+  }
+  .form-block__container {
+    background: url(./../../image/jpg/girl-992.jpg) center no-repeat;
+  }
+  .footer__phones-container {
+    gap: 7.6rem;
+  }
+  .footer__messangers-container {
+    column-gap: 7.6rem;
+  }
+  .product__description-text {
+    height: 7rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  .first-block__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 14.9rem 1.2rem 1.6rem;
+    height: 59.6rem;
+  }
+  .first-block__title {
+    width: 42.8rem;
+  }
+  .first-block__container {
+    max-height: 59.6rem;
+  }
+}
+@media (min-width: 827px) {
+  .product__description-text {
+    height: 5rem;
+  }
+}
+@media (min-width: 992px) {
+  .first-block__container {
+    background-image: url(./../../image/jpg/baner-1200.jpg);
+  }
+  .form-block__container {
+    background: url(./../../image/jpg/girl-1200.jpg) center no-repeat;
+  }
+  .header__container {
+    padding: 0 10rem;
+  }
+
+  .first-block {
+    &__body {
+      padding: 14.9rem 10rem 1.6rem;
+    }
+    &__delivery-text {
+      max-width: 24rem;
+      font-size: 24px;
+      line-height: 24px;
+    }
+    &__crown-text,
+    &__purse-text {
+      font-size: 24px;
+      line-height: 24px;
+    }
+    &__benefits-container {
+      & img {
+        height: 4rem;
+        width: 4rem;
+      }
+    }
+    &__benefits-wrapper {
+      gap: 2.4rem;
+    }
+    &__title {
+      font-size: 6rem;
+      line-height: 6.6rem;
+    }
+  }
+  .brend-block__container {
+    padding: 4.2rem 10rem 0;
+  }
+  .product-block__container {
+    padding: 4.2rem 10rem 0;
+  }
+  .product__description-text {
+    height: 7rem;
+  }
+  .form-block__title {
+    padding: 3.2rem 10rem 0;
+  }
+  .form-block__sub-title {
+    padding: 0 10rem;
+  }
+  .form-block__form-container {
+    padding: 0.8rem 10rem 2.6rem;
+  }
+  .footer {
+    padding: 3.2rem 10rem 0.8rem;
+  }
+}
+@media (min-width: 1003px) {
+  .product__description-text {
+    height: 5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .burger__menu {
+    display: none;
+  }
+  .header {
+    &__contacts-telegram,
+    &__contacts-whatsapp {
+      & p {
+        display: block;
+        font-family: 'Montserrat-Regular';
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        color: var(--color-white);
+      }
+      & img {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+    }
+    &__contacts-telegram {
+      width: 12.7rem;
+      height: 4rem;
+      border-radius: 0;
+      gap: 0.9rem;
+    }
+    &__contacts-whatsapp {
+      width: 13.6rem;
+      height: 4rem;
+      border-radius: 0;
+      gap: 0.9rem;
+    }
+    &__contacts-callback {
+      width: 15.2rem;
+      height: 4rem;
+      border-radius: 0;
+      gap: 0.9rem;
+      & p {
+        display: block;
+        font-family: 'Bebas-Neue-bold';
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        color: var(--color-white);
+      }
+      & img {
+        display: none;
+      }
+    }
+    &__contacts-phone {
+      display: flex;
+      margin-left: 5.6rem;
+    }
+    &__contacts-phone-number {
+      font-size: 1.6rem;
+    }
+    &__contacts {
+      column-gap: 0;
+    }
+    &__contacts-telegram {
+      margin-left: 1.6rem;
+    }
+    &__contacts-callback {
+      margin-left: 4.8rem;
+    }
+  }
+  .first-block__body {
+    justify-content: space-between;
+    padding: 14.9rem 10rem 5.6rem;
+  }
+  .first-block__title {
+    width: 54.8rem;
+  }
+  .brend-block__item-container {
+    height: 10.6rem;
+    & a img {
+      width: 22.7rem;
+      height: 5.8rem;
+    }
+  }
+  .brend-block__container {
+    justify-content: center;
+    gap: 2.4rem;
+    padding: 8rem 10rem 0;
+  }
+  .product-block__container {
+    padding: 8rem 10rem 0;
+  }
+  .sort__select {
+    font-family: 'Montserrat-Regular';
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  .sort__container {
+    margin-bottom: 1.6rem;
+  }
+  .product__container {
+    gap: 0;
+    margin-top: 2.4rem;
+    flex-direction: row;
+    padding: 2.4rem 1.6rem;
+  }
+  .product__price-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 26rem;
+  }
+  .product__callback-button {
+    margin: 1.6rem 0 2.4rem;
+  }
+  .product__description-text {
+    height: 12rem;
+  }
+  .product__price-container {
+    margin-top: 0.6rem;
+  }
+  .product__description-container {
+    margin-top: 0;
+  }
+  .product__title {
+    margin-top: 1.4rem;
+  }
+  .product__container {
+    gap: 2.4rem;
+  }
+  .product__opt {
+    text-align: start;
+  }
+}

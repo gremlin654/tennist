@@ -90,6 +90,7 @@ h6 {
   --color-light: #f5f4f0;
   --color-orange: #ff6031;
   --color-blue: #5b7fbd;
+  --color-blue-dark: #1f3c6d;
   --color-dark: #111111;
   --color-grey: #9e9e9e;
   --color-grey-light: #e9e9e9;
@@ -166,6 +167,92 @@ h6 {
   border: 1px solid var(--color-blue);
 }
 
+.form__input-name, .form__input-phone {
+  width: 100%;
+  height: 4rem;
+  padding: 0 1rem 0 4rem;
+  background: var(--color-light);
+}
+
+.form-callback__button, .footer__phone-callback, .form__button, .product__callback-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16.9rem;
+  height: 4.8rem;
+  background-color: var(--color-orange);
+  font-family: "Bebas-Neue-bold";
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--color-white);
+}
+
+.header__contacts-callback, .header__contacts-telegram, .header__contacts-whatsapp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+}
+.header__contacts-callback img, .header__contacts-telegram img, .header__contacts-whatsapp img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.footer__telegram, .footer__whatsapp {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  -moz-column-gap: 0.9rem;
+       column-gap: 0.9rem;
+  height: 4rem;
+  font-family: "Montserrat-Regular";
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: var(--color-white);
+}
+.footer__telegram img, .footer__whatsapp img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.form-callback__input-name-text, .form-callback__input-email-text, .form-callback__input-phone-text, .form-callback__select-text, .form__textarea-text, .form__input-name-text, .form__input-phone-text {
+  font-family: "Montserrat-Regular";
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.form-callback__input-icon, .form__input-icon {
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  top: 3.6rem;
+  left: 1.2rem;
+}
+
+.modal__form-callback, .modal__form-request {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: rgba(41, 41, 41, 0.6);
+  transition: 0.3s;
+  z-index: 10;
+}
+.active.modal__form-callback, .active.modal__form-request {
+  display: flex;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
 body {
   background-color: var(--color-grey-light);
 }
@@ -197,7 +284,14 @@ body {
   right: 0;
   z-index: 5;
   height: 5.6rem;
-  border-bottom: 0.1rem solid #5b7fbd;
+  border-bottom: 0.1rem solid var(--color-blue);
+}
+.header.active {
+  background-color: var(--color-blue-dark);
+}
+.header.active-menu-burger {
+  background-color: var(--color-blue-dark);
+  border-bottom: 0;
 }
 .header__container {
   display: flex;
@@ -223,17 +317,105 @@ body {
        column-gap: 0.8rem;
 }
 .header__contacts-whatsapp {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 2.4rem;
-  height: 2.4rem;
-  border-radius: 50%;
   background-color: #43d854;
 }
-.header__contacts-whatsapp img {
-  width: 1.2rem;
-  height: 1.2rem;
+.header__contacts-telegram {
+  background-color: #28a8ea;
+}
+.header__contacts-callback {
+  background-color: var(--color-orange);
+}
+.header__contacts-phone {
+  display: none;
+  align-items: center;
+  -moz-column-gap: 0.8rem;
+       column-gap: 0.8rem;
+}
+.header__contacts-phone-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.header__contacts-phone-number {
+  font-family: "Montserrat-Bold";
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  color: var(--color-white);
+}
+.header__contacts-callback-text, .header__contacts-telegram-text, .header__contacts-whatsapp-text {
+  display: none;
+}
+
+.menu__list {
+  flex-direction: column;
+  position: fixed;
+  top: 5.6rem;
+  left: -100%;
+  width: 100%;
+  height: calc(100% - 5.6rem);
+  max-width: 100%;
+  transition: left 0.3s ease 0s;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 40px;
+  z-index: 2;
+  overflow: auto;
+}
+.menu__list.active {
+  left: 0;
+}
+.menu__item {
+  height: 6.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 0.1rem solid var(--color-blue);
+  padding: 0;
+  background-color: var(--color-blue-dark);
+}
+.menu__link {
+  font-family: "SourceSansPro-SemiBold";
+  text-transform: uppercase;
+  color: var(--color-white);
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+.menu__contacts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.6rem;
+  padding: 3.9rem 0 3.2rem;
+  background-color: var(--color-blue-dark);
+}
+.menu__phone {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 0.8rem;
+       column-gap: 0.8rem;
+}
+.menu__phone-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.menu__phone-number {
+  font-family: "SourceSansPro-Bold";
+  font-size: 2rem;
+  line-height: 3.2rem;
+  color: var(--color-white);
+}
+.menu__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18.5rem;
+  height: 4.7rem;
+  background-color: var(--color-orange);
+  font-family: "SourceSansPro-Bold";
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: var(--color-white);
 }
 
 .burger__menu {
@@ -247,9 +429,9 @@ body {
 .burger__menu-overlay {
   display: none;
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
-  height: 100%;
+  height: calc(100% - 5.6rem);
   width: 100%;
   z-index: 1;
 }
@@ -283,17 +465,18 @@ body {
   transform: scale(1) translate(0px, -50%);
   background: var(--color-white);
 }
-.burger__menu._active span {
+.burger__menu.active-burger span {
+  display: none;
   transform: rotate(-90deg) translate(1px, -1px);
 }
-.burger__menu._active::before {
+.burger__menu.active-burger::before {
   top: 50%;
-  transform: rotate(-90deg) translate(1px, -11px);
+  transform: rotate(45deg) translate(-0.15rem, 0rem);
   background: var(--color-white);
 }
-.burger__menu._active::after {
+.burger__menu.active-burger::after {
   bottom: 50%;
-  transform: rotate(-90deg) translate(-1px, 9px);
+  transform: rotate(-45deg) translate(-0.095rem, 0px);
   background: var(--color-white);
 }
 
@@ -343,6 +526,21 @@ body {
   width: calc(33.3333333333% - 0.7rem);
   height: 4.4rem;
   background-color: #ffffff;
+}
+
+.sort__container {
+  display: flex;
+  justify-content: space-between;
+}
+.sort__select {
+  color: var(--color-blue);
+  background: transparent;
+}
+.sort__select:invalid {
+  color: var(--color-grey);
+}
+.sort__select option[value=""] {
+  color: var(--color-grey);
 }
 
 .product-block__container {
@@ -444,30 +642,511 @@ body {
   color: var(--color-orange);
 }
 .product__callback-button {
+  margin: 1.6rem auto 2.4rem;
+}
+
+.form-block__container {
+  margin-top: 6.4rem;
+  background: url(./../../image/webp/footer.webp) center no-repeat;
+}
+.form-block__title {
+  font-family: "Montserrat-Bold";
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  text-align: center;
+  padding: 3.2rem 1.2rem 0;
+}
+.form-block__sub-title {
+  font-family: "Montserrat-Medium";
+  font-size: 1.6rem;
+  line-height: 2rem;
+  text-align: center;
+  padding: 0 1.2rem;
+  margin-top: 0.4rem;
+}
+.form-block__form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.8rem 1.2rem 2.6rem;
+}
+.form-block__form {
+  display: flex;
+  flex-direction: column;
+  max-width: 64.6rem;
+  height: 38.4rem;
+  width: 100%;
+  padding: 2.4rem 2.4rem 1.6rem;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: -2px 5px 40px rgba(31, 60, 109, 0.16);
+}
+
+.form__textarea-container, .form__input-name-container, .form__input-phone-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
+.form__input-name-container, .form__input-phone-container {
+  margin-top: 0.8rem;
+  position: relative;
+}
+.form__textarea {
+  width: 100%;
+  min-height: 11.2rem;
+  background: var(--color-light);
+  border: 0.1rem solid #cacaca;
+  overflow: auto;
+}
+.form__button {
+  margin: 1.6rem auto 0;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: #0a1d3d;
+  padding: 3.2rem 1.2rem 0.8rem;
+}
+.footer__logo-container {
+  display: flex;
+  justify-content: center;
+}
+.footer__logo img {
+  width: 19.7rem;
+  height: 3.2rem;
+}
+.footer__text {
+  font-family: "Bebas-Neue-bold";
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: var(--color-white);
+  margin-top: 2.4rem;
+  text-align: center;
+}
+.footer__phones-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.6rem;
+}
+.footer__phone {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 16.9rem;
-  height: 4.8rem;
-  margin: 1.6rem auto 2.4rem;
-  background-color: var(--color-orange);
-  font-family: "Bebas-Neue-bold";
-  font-size: 1.6rem;
+  -moz-column-gap: 0.8rem;
+       column-gap: 0.8rem;
+}
+.footer__phone-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.footer__phone-number {
+  font-family: "Montserrat-Bold";
+  font-size: 1.5rem;
   line-height: 2.4rem;
   color: var(--color-white);
 }
-
-.sort__container {
+.footer__phone-callback {
+  width: 15.2rem;
+  height: 4rem;
+}
+.footer__messangers-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  -moz-column-gap: 1.6rem;
+       column-gap: 1.6rem;
+  margin: 1.6rem 0 2.4rem;
 }
-.sort__select {
-  color: var(--color-blue);
+.footer__whatsapp {
+  width: 13.6rem;
+  background-color: #43d854;
+}
+.footer__telegram {
+  width: 12.7rem;
+  background-color: #28a8ea;
+}
+.footer__text-info {
+  padding-top: 0.8rem;
+  border-top: 0.1rem solid var(--color-blue);
+  font-family: "Montserrat-Regular";
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.modal__form-container {
+  position: relative;
+  max-width: 47.2rem;
+  max-height: 49.2rem;
+  background: var(--color-white);
+  box-shadow: -2px 5px 40px rgba(31, 60, 109, 0.16);
+  padding: 4rem;
+}
+.modal__form-title {
+  font-family: "Bebas-Neue-bold";
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  text-align: center;
+}
+.modal__form-sub-title {
+  font-family: "Montserrat-Regular";
+  font-size: 1.53rem;
+  line-height: 2.4rem;
+  margin-top: 1.6rem;
+  text-align: center;
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.4rem;
+  padding: 0 4.6rem;
+}
+
+.form-callback__input-phone-container, .form-callback__input-email-container {
+  margin-top: 0.8rem;
+  position: relative;
+}
+.form-callback__input-name-container {
+  position: relative;
+}
+.form-callback__input-phone-container, .form-callback__input-email-container, .form-callback__input-name-container, .form-callback__select-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
+.form-callback__input-phone-container, .form-callback__input-email-container, .form-callback__select-container {
+  margin-top: 1.6rem;
+}
+.form-callback__input-name, .form-callback__input-phone, .form-callback__input-email {
+  background: #f5f4f0;
+  border: 1px solid #cacaca;
+  width: 100%;
+  height: 4rem;
+  padding: 0 1rem 0 4rem;
+}
+.form-callback__input-name-text, .form-callback__input-email-text, .form-callback__input-phone-text, .form-callback__select-text {
+  color: #cacaca;
+}
+.form-callback__select {
+  background: #f5f4f0;
+  border: 1px solid #cacaca;
+  width: 100%;
+  height: 4rem;
+  padding: 0 2rem;
+}
+.form-callback__button {
+  margin: 2.4rem auto 0;
+}
+.form-callback__close-icon {
+  position: absolute;
+  width: 16px;
+  height: 16px;
   background: transparent;
+  top: 1.6rem;
+  right: 1.6rem;
 }
-.sort__select:invalid {
-  color: var(--color-grey);
+.form-callback__close-icon img {
+  width: 100%;
 }
-.sort__select option[value=""] {
-  color: var(--color-grey);
+
+@media (max-width: 335px) {
+  .footer__phone-number {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 360px) {
+  .first-block__container {
+    background-image: url(./../../image/jpg/baner-576.jpg);
+  }
+  .first-block__benefits-wrapper {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .form-block__container {
+    background: url(./../../image/jpg/girl-576.jpg) center no-repeat;
+  }
+  .footer__phones-container {
+    gap: 1.6rem;
+    justify-content: center;
+  }
+}
+@media (min-width: 403px) {
+  .product__description-text {
+    height: 10rem;
+  }
+}
+@media (min-width: 527px) {
+  .product__description-text {
+    height: 7rem;
+  }
+}
+@media (min-width: 576px) {
+  .first-block__container {
+    background-image: url(./../../image/jpg/baner-768.jpg);
+  }
+  .form-block__container {
+    background: url(./../../image/jpg/girl-768.jpg) center no-repeat;
+  }
+  .sort__container {
+    justify-content: flex-start;
+    gap: 3.2rem;
+  }
+}
+@media (min-width: 726px) {
+  .product__description-text {
+    height: 5rem;
+  }
+}
+@media (min-width: 768px) {
+  .menu__list {
+    top: 8rem;
+    height: calc(100% - 8rem);
+  }
+  .burger__menu-overlay {
+    height: calc(100% - 8rem);
+  }
+  .burger__menu {
+    width: 3.2rem;
+    height: 2.8rem;
+  }
+  .brend-block__item-container {
+    height: 6.4rem;
+    max-width: 27.4rem;
+  }
+  .header {
+    height: 8rem;
+  }
+  .header__logo img {
+    width: 19.7rem;
+    height: 3.2rem;
+  }
+  .header__contacts-callback, .header__contacts-telegram, .header__contacts-whatsapp {
+    width: 4rem;
+    height: 4rem;
+  }
+  .header__contacts-callback img, .header__contacts-telegram img, .header__contacts-whatsapp img {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .first-block__container {
+    background-image: url(./../../image/jpg/baner-992.jpg);
+  }
+  .form-block__container {
+    background: url(./../../image/jpg/girl-992.jpg) center no-repeat;
+  }
+  .footer__phones-container {
+    gap: 7.6rem;
+  }
+  .footer__messangers-container {
+    -moz-column-gap: 7.6rem;
+         column-gap: 7.6rem;
+  }
+  .product__description-text {
+    height: 7rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  .first-block__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 14.9rem 1.2rem 1.6rem;
+    height: 59.6rem;
+  }
+  .first-block__title {
+    width: 42.8rem;
+  }
+  .first-block__container {
+    max-height: 59.6rem;
+  }
+}
+@media (min-width: 827px) {
+  .product__description-text {
+    height: 5rem;
+  }
+}
+@media (min-width: 992px) {
+  .first-block__container {
+    background-image: url(./../../image/jpg/baner-1200.jpg);
+  }
+  .form-block__container {
+    background: url(./../../image/jpg/girl-1200.jpg) center no-repeat;
+  }
+  .header__container {
+    padding: 0 10rem;
+  }
+  .first-block__body {
+    padding: 14.9rem 10rem 1.6rem;
+  }
+  .first-block__delivery-text {
+    max-width: 24rem;
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .first-block__crown-text, .first-block__purse-text {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .first-block__benefits-container img {
+    height: 4rem;
+    width: 4rem;
+  }
+  .first-block__benefits-wrapper {
+    gap: 2.4rem;
+  }
+  .first-block__title {
+    font-size: 6rem;
+    line-height: 6.6rem;
+  }
+  .brend-block__container {
+    padding: 4.2rem 10rem 0;
+  }
+  .product-block__container {
+    padding: 4.2rem 10rem 0;
+  }
+  .product__description-text {
+    height: 7rem;
+  }
+  .form-block__title {
+    padding: 3.2rem 10rem 0;
+  }
+  .form-block__sub-title {
+    padding: 0 10rem;
+  }
+  .form-block__form-container {
+    padding: 0.8rem 10rem 2.6rem;
+  }
+  .footer {
+    padding: 3.2rem 10rem 0.8rem;
+  }
+}
+@media (min-width: 1003px) {
+  .product__description-text {
+    height: 5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .burger__menu {
+    display: none;
+  }
+  .header__contacts-telegram p, .header__contacts-whatsapp p {
+    display: block;
+    font-family: "Montserrat-Regular";
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--color-white);
+  }
+  .header__contacts-telegram img, .header__contacts-whatsapp img {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .header__contacts-telegram {
+    width: 12.7rem;
+    height: 4rem;
+    border-radius: 0;
+    gap: 0.9rem;
+  }
+  .header__contacts-whatsapp {
+    width: 13.6rem;
+    height: 4rem;
+    border-radius: 0;
+    gap: 0.9rem;
+  }
+  .header__contacts-callback {
+    width: 15.2rem;
+    height: 4rem;
+    border-radius: 0;
+    gap: 0.9rem;
+  }
+  .header__contacts-callback p {
+    display: block;
+    font-family: "Bebas-Neue-bold";
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    color: var(--color-white);
+  }
+  .header__contacts-callback img {
+    display: none;
+  }
+  .header__contacts-phone {
+    display: flex;
+    margin-left: 5.6rem;
+  }
+  .header__contacts-phone-number {
+    font-size: 1.6rem;
+  }
+  .header__contacts {
+    -moz-column-gap: 0;
+         column-gap: 0;
+  }
+  .header__contacts-telegram {
+    margin-left: 1.6rem;
+  }
+  .header__contacts-callback {
+    margin-left: 4.8rem;
+  }
+  .first-block__body {
+    justify-content: space-between;
+    padding: 14.9rem 10rem 5.6rem;
+  }
+  .first-block__title {
+    width: 54.8rem;
+  }
+  .brend-block__item-container {
+    height: 10.6rem;
+  }
+  .brend-block__item-container a img {
+    width: 22.7rem;
+    height: 5.8rem;
+  }
+  .brend-block__container {
+    justify-content: center;
+    gap: 2.4rem;
+    padding: 8rem 10rem 0;
+  }
+  .product-block__container {
+    padding: 8rem 10rem 0;
+  }
+  .sort__select {
+    font-family: "Montserrat-Regular";
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  .sort__container {
+    margin-bottom: 1.6rem;
+  }
+  .product__container {
+    gap: 0;
+    margin-top: 2.4rem;
+    flex-direction: row;
+    padding: 2.4rem 1.6rem;
+  }
+  .product__price-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 26rem;
+  }
+  .product__callback-button {
+    margin: 1.6rem 0 2.4rem;
+  }
+  .product__description-text {
+    height: 12rem;
+  }
+  .product__price-container {
+    margin-top: 0.6rem;
+  }
+  .product__description-container {
+    margin-top: 0;
+  }
+  .product__title {
+    margin-top: 1.4rem;
+  }
+  .product__container {
+    gap: 2.4rem;
+  }
+  .product__opt {
+    text-align: start;
+  }
 }

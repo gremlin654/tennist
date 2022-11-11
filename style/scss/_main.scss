@@ -57,6 +57,23 @@
   }
 }
 
+.sort {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__select {
+    color: var(--color-blue);
+    background: transparent;
+    &:invalid {
+      color: var(--color-grey);
+    }
+    & option[value=''] {
+      color: var(--color-grey);
+    }
+  }
+}
+
 .product-block {
   &__container {
     display: flex;
@@ -155,32 +172,83 @@
     color: var(--color-orange);
   }
   &__callback-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 16.9rem;
-    height: 4.8rem;
+    @extend %buttonOrange;
     margin: 1.6rem auto 2.4rem;
-    background-color: var(--color-orange);
-    font-family: 'Bebas-Neue-bold';
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    color: var(--color-white);
   }
 }
-.sort {
+
+.form-block {
   &__container {
-    display: flex;
-    justify-content: space-between;
+    margin-top: 6.4rem;
+    background: url(./../../image/webp/footer.webp) center no-repeat;
   }
-  &__select {
-    color: var(--color-blue);
-    background: transparent;
-    &:invalid {
-      color: var(--color-grey);
-    }
-    & option[value=''] {
-      color: var(--color-grey);
-    }
+  &__title {
+    font-family: 'Montserrat-Bold';
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    text-align: center;
+    padding: 3.2rem 1.2rem 0;
+  }
+  &__sub-title {
+    font-family: 'Montserrat-Medium';
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-align: center;
+    padding: 0 1.2rem;
+    margin-top: 0.4rem;
+  }
+  &__form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem 1.2rem 2.6rem;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 64.6rem;
+    height: 38.4rem;
+    width: 100%;
+    padding: 2.4rem 2.4rem 1.6rem;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: -2px 5px 40px rgb(31 60 109 / 16%);
+  }
+}
+
+.form {
+  &__textarea-container,
+  &__input-name-container,
+  &__input-phone-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
+  }
+  &__input-name-container,
+  &__input-phone-container {
+    margin-top: 0.8rem;
+    position: relative;
+  }
+  &__textarea {
+    width: 100%;
+    min-height: 11.2rem;
+    background: var(--color-light);
+    border: 0.1rem solid #cacaca;
+    overflow: auto;
+  }
+  &__textarea-text,
+  &__input-name-text,
+  &__input-phone-text {
+    @extend %inputText;
+  }
+  &__input-name,
+  &__input-phone {
+    @extend %inputMainForm;
+  }
+  &__button {
+    @extend %buttonOrange;
+    margin: 1.6rem auto 0;
+  }
+  &__input-icon {
+    @extend %inputIcon;
   }
 }

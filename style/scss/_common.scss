@@ -1,4 +1,9 @@
 body {
+  &.lock {
+    overflow: hidden;
+  }
+}
+body {
   background-color: var(--color-grey-light);
 }
 .wrapper {
