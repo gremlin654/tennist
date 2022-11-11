@@ -4,15 +4,17 @@
   }
 }
 @media (min-width: 360px) {
-  .first-block__container {
-    background-image: url(./../../image/jpg/baner-576.jpg);
-  }
-  .first-block__benefits-wrapper {
-    flex-direction: row;
-    gap: 1rem;
+  .first-block {
+    &__container {
+      background-image: url(./../../image/webp/baner-576.webp);
+    }
+    &__benefits-wrapper {
+      flex-direction: row;
+      gap: 1rem;
+    }
   }
   .form-block__container {
-    background: url(./../../image/jpg/girl-576.jpg) center no-repeat;
+    background: url(./../../image/webp/girl-576.webp) center no-repeat;
   }
   .footer__phones-container {
     gap: 1.6rem;
@@ -31,10 +33,10 @@
 }
 @media (min-width: 576px) {
   .first-block__container {
-    background-image: url(./../../image/jpg/baner-768.jpg);
+    background-image: url(./../../image/webp/baner-768.webp);
   }
   .form-block__container {
-    background: url(./../../image/jpg/girl-768.jpg) center no-repeat;
+    background: url(./../../image/webp/girl-768.webp) center no-repeat;
   }
   .sort__container {
     justify-content: flex-start;
@@ -86,35 +88,39 @@
       }
     }
   }
-  .first-block__container {
-    background-image: url(./../../image/jpg/baner-992.jpg);
+  .first-block {
+    &__container {
+      background-image: url(./../../image/webp/baner-992.webp);
+    }
+    &__body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 14.9rem 1.2rem 1.6rem;
+      height: 59.6rem;
+    }
+    &__title {
+      width: 42.8rem;
+    }
+    &__container {
+      max-height: 59.6rem;
+    }
   }
   .form-block__container {
-    background: url(./../../image/jpg/girl-992.jpg) center no-repeat;
+    background: url(./../../image/webp/girl-992.webp) center no-repeat;
   }
-  .footer__phones-container {
-    gap: 7.6rem;
-  }
-  .footer__messangers-container {
-    column-gap: 7.6rem;
+  .footer {
+    &__phones-container {
+      gap: 7.6rem;
+    }
+    &__messangers-container {
+      column-gap: 7.6rem;
+    }
   }
   .product__description-text {
     height: 7rem;
     font-size: 1.6rem;
     line-height: 2.4rem;
-  }
-  .first-block__body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 14.9rem 1.2rem 1.6rem;
-    height: 59.6rem;
-  }
-  .first-block__title {
-    width: 42.8rem;
-  }
-  .first-block__container {
-    max-height: 59.6rem;
   }
 }
 @media (min-width: 827px) {
@@ -123,17 +129,13 @@
   }
 }
 @media (min-width: 992px) {
-  .first-block__container {
-    background-image: url(./../../image/jpg/baner-1200.jpg);
-  }
-  .form-block__container {
-    background: url(./../../image/jpg/girl-1200.jpg) center no-repeat;
-  }
   .header__container {
     padding: 0 10rem;
   }
-
   .first-block {
+    &__container {
+      background-image: url(./../../image/webp/baner-1200.webp);
+    }
     &__body {
       padding: 14.9rem 10rem 1.6rem;
     }
@@ -170,14 +172,19 @@
   .product__description-text {
     height: 7rem;
   }
-  .form-block__title {
-    padding: 3.2rem 10rem 0;
-  }
-  .form-block__sub-title {
-    padding: 0 10rem;
-  }
-  .form-block__form-container {
-    padding: 0.8rem 10rem 2.6rem;
+  .form-block {
+    &__container {
+      background: url(./../../image/webp/girl-1200.webp) center no-repeat;
+    }
+    &__title {
+      padding: 3.2rem 10rem 0;
+    }
+    &__sub-title {
+      padding: 0 10rem;
+    }
+    &__form-container {
+      padding: 0.8rem 10rem 2.6rem;
+    }
   }
   .footer {
     padding: 3.2rem 10rem 0.8rem;
@@ -193,6 +200,9 @@
     display: none;
   }
   .header {
+    &__logo-container {
+      margin-left: 0;
+    }
     &__contacts-telegram,
     &__contacts-whatsapp {
       & p {
@@ -220,20 +230,10 @@
       gap: 0.9rem;
     }
     &__contacts-callback {
-      width: 15.2rem;
-      height: 4rem;
-      border-radius: 0;
-      gap: 0.9rem;
-      & p {
-        display: block;
-        font-family: 'Bebas-Neue-bold';
-        font-size: 1.6rem;
-        line-height: 1.6rem;
-        color: var(--color-white);
-      }
-      & img {
-        display: none;
-      }
+      display: none;
+    }
+    &__button-callback {
+      display: flex;
     }
     &__contacts-phone {
       display: flex;
@@ -252,68 +252,283 @@
       margin-left: 4.8rem;
     }
   }
-  .first-block__body {
-    justify-content: space-between;
-    padding: 14.9rem 10rem 5.6rem;
-  }
-  .first-block__title {
-    width: 54.8rem;
-  }
-  .brend-block__item-container {
-    height: 10.6rem;
-    & a img {
-      width: 22.7rem;
-      height: 5.8rem;
+  .first-block {
+    &__container {
+      background-image: url(./../../image/webp/baner-1376.webp);
+    }
+    &__body {
+      justify-content: space-between;
+      padding: 14.9rem 10rem 5.6rem;
+    }
+    &__title {
+      width: 54.8rem;
     }
   }
-  .brend-block__container {
-    justify-content: center;
-    gap: 2.4rem;
-    padding: 8rem 10rem 0;
+  .brend-block {
+    &__item-container {
+      height: 10.6rem;
+      & a img {
+        width: 22.7rem;
+        height: 5.8rem;
+      }
+    }
+    &__container {
+      justify-content: center;
+      gap: 2.4rem;
+      padding: 8rem 10rem 0;
+    }
   }
   .product-block__container {
     padding: 8rem 10rem 0;
   }
-  .sort__select {
-    font-family: 'Montserrat-Regular';
-    font-size: 1.4rem;
-    line-height: 2rem;
+  .sort {
+    &__select {
+      font-family: 'Montserrat-Regular';
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
+    &__container {
+      margin-bottom: 1.6rem;
+    }
   }
-  .sort__container {
-    margin-bottom: 1.6rem;
+  .product {
+    &__container {
+      gap: 2.4rem;
+      margin-top: 2.4rem;
+      flex-direction: row;
+      padding: 2.4rem 1.6rem;
+    }
+    &__price-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 26rem;
+    }
+    &__callback-button {
+      margin: 1.6rem 0 2.4rem;
+    }
+    &__description-text {
+      height: 12rem;
+      margin-top: 2.4rem;
+      text-align: start;
+    }
+    &__price-container {
+      margin-top: 0.6rem;
+    }
+    &__description-container {
+      margin-top: 0;
+      align-items: flex-start;
+    }
+    &__title {
+      margin-top: 1.4rem;
+      text-align: start;
+      padding: 0;
+    }
+    &__opt {
+      text-align: start;
+    }
+    &__status-container {
+      margin-top: 1.6rem;
+    }
+    &__description-button {
+      margin-top: 2.4rem;
+    }
   }
-  .product__container {
-    gap: 0;
-    margin-top: 2.4rem;
+  .form-block {
+    &__sub-title {
+      padding: 0px 2rem;
+      font-size: 2.4rem;
+      line-height: 2.9rem;
+      width: 73.8rem;
+      height: 5.8rem;
+      margin: 0.8rem auto 3.2rem;
+    }
+    &__title {
+      padding: 0;
+      font-size: 5.6rem;
+      line-height: 6.8rem;
+      width: 109.6rem;
+      margin: 4rem auto 0;
+    }
+    &__container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    &__form-container {
+      display: flex;
+      align-items: flex-end;
+      padding: 0 10rem 6.2rem;
+    }
+  }
+  .form {
+    &__input-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__title {
+      display: flex;
+      font-family: 'Bebas-Neue-bold';
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+      justify-content: center;
+    }
+    &__button {
+      margin: 0.8rem auto 0;
+    }
+    &__input-name-container,
+    &__input-phone-container {
+      margin-top: 0;
+      width: 26.4rem;
+    }
+  }
+  .form-block {
+    &__container {
+      background: url(./../../image/webp/girl-1376.webp) center no-repeat;
+    }
+    &__form {
+      padding: 2.4rem 4.8rem;
+      gap: 1.6rem;
+    }
+  }
+  .footer {
     flex-direction: row;
-    padding: 2.4rem 1.6rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.2rem 10rem 1.9rem;
+
+    &__logo-container {
+      order: 1;
+    }
+    &__messangers-container {
+      order: 2;
+      margin: 0;
+      column-gap: 1.6rem;
+    }
+    &__phones-container {
+      order: 3;
+      margin: 0;
+      gap: 3.2rem;
+    }
+    &__text {
+      order: 4;
+      font-size: 2.4rem;
+      margin-top: 2.4rem;
+      width: 100%;
+    }
+    &__text-info {
+      order: 5;
+      margin-top: 0.8rem;
+    }
+    &__phone-number {
+      font-size: 1.6rem;
+    }
   }
-  .product__price-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 26rem;
+}
+@media (min-width: 1245px) {
+  .product__description-text {
+    height: 10rem;
   }
-  .product__callback-button {
-    margin: 1.6rem 0 2.4rem;
+}
+@media (min-width: 1376px) {
+  .first-block__container {
+    background-image: url(./../../image/webp/baner-1440.webp);
+  }
+  .form-block__container {
+    background: url(./../../image/webp/girl-1440.webp) center no-repeat;
+  }
+  .first-block__benefits-container {
+    column-gap: 1.6rem;
+  }
+  .first-block__title {
+    font-size: 8rem;
+    line-height: 9.8rem;
+  }
+}
+@media (min-width: 1386px) {
+  .product__description-text {
+    height: 7rem;
+  }
+}
+@media (min-width: 1440px) {
+  .first-block__container {
+    background-image: url(./../../image/webp/baner-1920.webp);
+  }
+  .form-block__container {
+    background: url(./../../image/webp/girl-1920.webp) center no-repeat;
+  }
+  .header__container {
+    padding: 0 15rem;
+  }
+  .first-block__body {
+    padding: 14.9rem 15rem 5.6rem;
+  }
+  .brend-block__container {
+    padding: 8rem 15rem 0;
+  }
+  .product-block__container {
+    padding: 8rem 15rem 0;
   }
   .product__description-text {
-    height: 12rem;
+    height: 10rem;
   }
-  .product__price-container {
-    margin-top: 0.6rem;
+  .form-block__form-container {
+    padding: 0 15rem 6.2rem;
   }
-  .product__description-container {
-    margin-top: 0;
+  .footer {
+    padding: 3.2rem 15rem 1.9rem;
   }
-  .product__title {
-    margin-top: 1.4rem;
+}
+@media (min-width: 1486px) {
+  .product__description-text {
+    height: 7rem;
   }
-  .product__container {
-    gap: 2.4rem;
+}
+@media (min-width: 1686px) {
+  .header__container {
+    padding: 0 25rem;
   }
-  .product__opt {
-    text-align: start;
+  .first-block__body {
+    padding: 14.9rem 25rem 5.6rem;
+  }
+  .first-block__title {
+    width: 73.8rem;
+  }
+  .brend-block__container {
+    padding: 8rem 25rem 0;
+  }
+  .product-block__container {
+    padding: 8rem 25rem 0;
+  }
+  .form-block__form-container {
+    padding: 0 25rem 6.2rem;
+  }
+  .footer {
+    padding: 3.2rem 25rem 1.9rem;
+  }
+}
+@media (min-width: 1786px) {
+  .header__container {
+    padding: 0 30rem;
+  }
+  .first-block__body {
+    padding: 14.9rem 30rem 5.6rem;
+  }
+  .first-block__title {
+    width: 73.8rem;
+  }
+  .brend-block__container {
+    padding: 8rem 30rem 0;
+  }
+  .product-block__container {
+    padding: 8rem 30rem 0;
+  }
+  .form-block__form-container {
+    padding: 0 30rem 6.2rem;
+  }
+  .footer {
+    padding: 3.2rem 30rem 1.9rem;
   }
 }

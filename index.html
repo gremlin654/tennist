@@ -89,6 +89,7 @@
               />
               <p class="header__contacts-callback-text">ЗАКАЗАТЬ ЗВОНОК</p>
             </a>
+            <button class="header__button-callback" data-call="callback">ЗАКАЗАТЬ ЗВОНОК</button>
           </div>
         </div>
       </header>
@@ -565,19 +566,22 @@
           </h4>
           <div class="form-block__form-container">
             <form class="form-block__form">
+              <h3 class="form__title">Что бы вы хотели приобрести?</h3>
               <div class="form__textarea-container">
                 <p class="form__textarea-text">Введите Ваше сообщение</p>
                 <textarea class="form__textarea" required></textarea>
               </div>
-              <div class="form__input-name-container">
-                <p class="form__input-name-text">Ваше имя</p>
-                <input class="form__input-name" type="text" required />
-                <img class="form__input-icon" src="./image/svg/user.svg" alt="user" />
-              </div>
-              <div class="form__input-phone-container">
-                <p class="form__input-phone-text">Номер телефона</p>
-                <input class="form__input-phone" type="text" required />
-                <img class="form__input-icon" src="./image/svg/phone-call.svg" alt="phone-call" />
+              <div class="form__input-container">
+                <div class="form__input-name-container">
+                  <p class="form__input-name-text">Ваше имя</p>
+                  <input class="form__input-name" type="text" required />
+                  <img class="form__input-icon" src="./image/svg/user.svg" alt="user" />
+                </div>
+                <div class="form__input-phone-container">
+                  <p class="form__input-phone-text">Номер телефона</p>
+                  <input class="form__input-phone" type="text" required />
+                  <img class="form__input-icon" src="./image/svg/phone-call.svg" alt="phone-call" />
+                </div>
               </div>
               <button type="submit" class="form__button">Отправить</button>
             </form>

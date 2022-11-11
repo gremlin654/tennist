@@ -7,6 +7,14 @@ const descriptionText2 = document.querySelector('#description-text2');
 const descriptionBtn3 = document.querySelector('#description-btn3');
 const descriptionText3 = document.querySelector('#description-text3');
 const header = document.querySelector('.header');
+const iconMenu = document.querySelector('.burger__menu');
+const menuHeader = document.querySelector('.menu__list');
+const menuOverlay = document.querySelector('.burger__menu-overlay');
+const buttonCallback = document.querySelectorAll('[data-call]');
+const modalCallback = document.querySelector('.modal__form-callback');
+const closeButtons = document.querySelectorAll('[data-close]');
+const buttonRequest = document.querySelectorAll('[data-request]');
+const modalRequest = document.querySelector('.modal__form-request');
 
 const addClassDescriptions = (btn, text) => {
   text.classList.toggle('descriptional-more');
@@ -37,13 +45,6 @@ document.addEventListener('scroll', () => {
   } else header.classList.remove('active');
 });
 
-const iconMenu = document.querySelector('.burger__menu');
-const menuHeader = document.querySelector('.menu__list');
-const menuOverlay = document.querySelector('.burger__menu-overlay');
-// const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
-// const logoHeader = document.querySelector('.header__logo-container');
-// const logoBurger = document.querySelector('.burger-logo');
-
 if (iconMenu) {
   iconMenu.addEventListener('click', () => {
     document.body.classList.toggle('lock');
@@ -51,16 +52,8 @@ if (iconMenu) {
     menuHeader.classList.toggle('active');
     menuOverlay.classList.toggle('burger__menu-overlay-active');
     header.classList.toggle('active-menu-burger');
-    // logoHeader.classList.toggle('unactive-logo');
-    // logoBurger.classList.toggle('active-logo');
   });
 }
-
-const buttonCallback = document.querySelectorAll('[data-call]');
-const modalCallback = document.querySelector('.modal__form-callback');
-const closeButtons = document.querySelectorAll('[data-close]');
-const buttonRequest = document.querySelectorAll('[data-request]');
-const modalRequest = document.querySelector('.modal__form-request');
 
 buttonCallback.forEach((button) =>
   button.addEventListener('click', () => {

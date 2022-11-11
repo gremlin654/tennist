@@ -174,7 +174,7 @@ h6 {
   background: var(--color-light);
 }
 
-.form-callback__button, .footer__phone-callback, .form__button, .product__callback-button {
+.form-callback__button, .footer__phone-callback, .form__button, .product__callback-button, .header__button-callback {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -259,7 +259,9 @@ body {
 
 .wrapper {
   min-height: 100%;
+  max-width: 192rem;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .slider__container {
@@ -279,9 +281,8 @@ body {
   align-items: center;
   position: fixed;
   width: 100%;
+  max-width: 192rem;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 5;
   height: 5.6rem;
   border-bottom: 0.1rem solid var(--color-blue);
@@ -324,6 +325,12 @@ body {
 }
 .header__contacts-callback {
   background-color: var(--color-orange);
+}
+.header__button-callback {
+  display: none;
+  width: 15.2rem;
+  height: 4rem;
+  margin-left: 4.8rem;
 }
 .header__contacts-phone {
   display: none;
@@ -482,7 +489,7 @@ body {
 
 .first-block__container {
   position: relative;
-  background-image: url(./../../image/webp/banner-small.webp);
+  background-image: url(./../../image/webp/banner-320.webp);
   background-position: center;
   background-repeat: no-repeat;
   max-height: 468px;
@@ -647,7 +654,7 @@ body {
 
 .form-block__container {
   margin-top: 6.4rem;
-  background: url(./../../image/webp/footer.webp) center no-repeat;
+  background: url(./../../image/webp/girl-320.webp) center no-repeat;
 }
 .form-block__title {
   font-family: "Montserrat-Bold";
@@ -681,6 +688,9 @@ body {
   box-shadow: -2px 5px 40px rgba(31, 60, 109, 0.16);
 }
 
+.form__title {
+  display: none;
+}
 .form__textarea-container, .form__input-name-container, .form__input-phone-container {
   display: flex;
   flex-direction: column;
@@ -856,14 +866,14 @@ body {
 }
 @media (min-width: 360px) {
   .first-block__container {
-    background-image: url(./../../image/jpg/baner-576.jpg);
+    background-image: url(./../../image/webp/baner-576.webp);
   }
   .first-block__benefits-wrapper {
     flex-direction: row;
     gap: 1rem;
   }
   .form-block__container {
-    background: url(./../../image/jpg/girl-576.jpg) center no-repeat;
+    background: url(./../../image/webp/girl-576.webp) center no-repeat;
   }
   .footer__phones-container {
     gap: 1.6rem;
@@ -882,10 +892,10 @@ body {
 }
 @media (min-width: 576px) {
   .first-block__container {
-    background-image: url(./../../image/jpg/baner-768.jpg);
+    background-image: url(./../../image/webp/baner-768.webp);
   }
   .form-block__container {
-    background: url(./../../image/jpg/girl-768.jpg) center no-repeat;
+    background: url(./../../image/webp/girl-768.webp) center no-repeat;
   }
   .sort__container {
     justify-content: flex-start;
@@ -929,22 +939,7 @@ body {
     height: 2.4rem;
   }
   .first-block__container {
-    background-image: url(./../../image/jpg/baner-992.jpg);
-  }
-  .form-block__container {
-    background: url(./../../image/jpg/girl-992.jpg) center no-repeat;
-  }
-  .footer__phones-container {
-    gap: 7.6rem;
-  }
-  .footer__messangers-container {
-    -moz-column-gap: 7.6rem;
-         column-gap: 7.6rem;
-  }
-  .product__description-text {
-    height: 7rem;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
+    background-image: url(./../../image/webp/baner-992.webp);
   }
   .first-block__body {
     display: flex;
@@ -959,6 +954,21 @@ body {
   .first-block__container {
     max-height: 59.6rem;
   }
+  .form-block__container {
+    background: url(./../../image/webp/girl-992.webp) center no-repeat;
+  }
+  .footer__phones-container {
+    gap: 7.6rem;
+  }
+  .footer__messangers-container {
+    -moz-column-gap: 7.6rem;
+         column-gap: 7.6rem;
+  }
+  .product__description-text {
+    height: 7rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
 }
 @media (min-width: 827px) {
   .product__description-text {
@@ -966,14 +976,11 @@ body {
   }
 }
 @media (min-width: 992px) {
-  .first-block__container {
-    background-image: url(./../../image/jpg/baner-1200.jpg);
-  }
-  .form-block__container {
-    background: url(./../../image/jpg/girl-1200.jpg) center no-repeat;
-  }
   .header__container {
     padding: 0 10rem;
+  }
+  .first-block__container {
+    background-image: url(./../../image/webp/baner-1200.webp);
   }
   .first-block__body {
     padding: 14.9rem 10rem 1.6rem;
@@ -1007,6 +1014,9 @@ body {
   .product__description-text {
     height: 7rem;
   }
+  .form-block__container {
+    background: url(./../../image/webp/girl-1200.webp) center no-repeat;
+  }
   .form-block__title {
     padding: 3.2rem 10rem 0;
   }
@@ -1028,6 +1038,9 @@ body {
 @media (min-width: 1200px) {
   .burger__menu {
     display: none;
+  }
+  .header__logo-container {
+    margin-left: 0;
   }
   .header__contacts-telegram p, .header__contacts-whatsapp p {
     display: block;
@@ -1053,20 +1066,10 @@ body {
     gap: 0.9rem;
   }
   .header__contacts-callback {
-    width: 15.2rem;
-    height: 4rem;
-    border-radius: 0;
-    gap: 0.9rem;
-  }
-  .header__contacts-callback p {
-    display: block;
-    font-family: "Bebas-Neue-bold";
-    font-size: 1.6rem;
-    line-height: 1.6rem;
-    color: var(--color-white);
-  }
-  .header__contacts-callback img {
     display: none;
+  }
+  .header__button-callback {
+    display: flex;
   }
   .header__contacts-phone {
     display: flex;
@@ -1084,6 +1087,9 @@ body {
   }
   .header__contacts-callback {
     margin-left: 4.8rem;
+  }
+  .first-block__container {
+    background-image: url(./../../image/webp/baner-1376.webp);
   }
   .first-block__body {
     justify-content: space-between;
@@ -1116,7 +1122,7 @@ body {
     margin-bottom: 1.6rem;
   }
   .product__container {
-    gap: 0;
+    gap: 2.4rem;
     margin-top: 2.4rem;
     flex-direction: row;
     padding: 2.4rem 1.6rem;
@@ -1133,20 +1139,218 @@ body {
   }
   .product__description-text {
     height: 12rem;
+    margin-top: 2.4rem;
+    text-align: start;
   }
   .product__price-container {
     margin-top: 0.6rem;
   }
   .product__description-container {
     margin-top: 0;
+    align-items: flex-start;
   }
   .product__title {
     margin-top: 1.4rem;
-  }
-  .product__container {
-    gap: 2.4rem;
+    text-align: start;
+    padding: 0;
   }
   .product__opt {
     text-align: start;
+  }
+  .product__status-container {
+    margin-top: 1.6rem;
+  }
+  .product__description-button {
+    margin-top: 2.4rem;
+  }
+  .form-block__sub-title {
+    padding: 0px 2rem;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    width: 73.8rem;
+    height: 5.8rem;
+    margin: 0.8rem auto 3.2rem;
+  }
+  .form-block__title {
+    padding: 0;
+    font-size: 5.6rem;
+    line-height: 6.8rem;
+    width: 109.6rem;
+    margin: 4rem auto 0;
+  }
+  .form-block__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .form-block__form-container {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 10rem 6.2rem;
+  }
+  .form__input-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .form__title {
+    display: flex;
+    font-family: "Bebas-Neue-bold";
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    justify-content: center;
+  }
+  .form__button {
+    margin: 0.8rem auto 0;
+  }
+  .form__input-name-container, .form__input-phone-container {
+    margin-top: 0;
+    width: 26.4rem;
+  }
+  .form-block__container {
+    background: url(./../../image/webp/girl-1376.webp) center no-repeat;
+  }
+  .form-block__form {
+    padding: 2.4rem 4.8rem;
+    gap: 1.6rem;
+  }
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.2rem 10rem 1.9rem;
+  }
+  .footer__logo-container {
+    order: 1;
+  }
+  .footer__messangers-container {
+    order: 2;
+    margin: 0;
+    -moz-column-gap: 1.6rem;
+         column-gap: 1.6rem;
+  }
+  .footer__phones-container {
+    order: 3;
+    margin: 0;
+    gap: 3.2rem;
+  }
+  .footer__text {
+    order: 4;
+    font-size: 2.4rem;
+    margin-top: 2.4rem;
+    width: 100%;
+  }
+  .footer__text-info {
+    order: 5;
+    margin-top: 0.8rem;
+  }
+  .footer__phone-number {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 1245px) {
+  .product__description-text {
+    height: 10rem;
+  }
+}
+@media (min-width: 1376px) {
+  .first-block__container {
+    background-image: url(./../../image/webp/baner-1440.webp);
+  }
+  .form-block__container {
+    background: url(./../../image/webp/girl-1440.webp) center no-repeat;
+  }
+  .first-block__benefits-container {
+    -moz-column-gap: 1.6rem;
+         column-gap: 1.6rem;
+  }
+  .first-block__title {
+    font-size: 8rem;
+    line-height: 9.8rem;
+  }
+}
+@media (min-width: 1386px) {
+  .product__description-text {
+    height: 7rem;
+  }
+}
+@media (min-width: 1440px) {
+  .first-block__container {
+    background-image: url(./../../image/webp/baner-1920.webp);
+  }
+  .form-block__container {
+    background: url(./../../image/webp/girl-1920.webp) center no-repeat;
+  }
+  .header__container {
+    padding: 0 15rem;
+  }
+  .first-block__body {
+    padding: 14.9rem 15rem 5.6rem;
+  }
+  .brend-block__container {
+    padding: 8rem 15rem 0;
+  }
+  .product-block__container {
+    padding: 8rem 15rem 0;
+  }
+  .product__description-text {
+    height: 10rem;
+  }
+  .form-block__form-container {
+    padding: 0 15rem 6.2rem;
+  }
+  .footer {
+    padding: 3.2rem 15rem 1.9rem;
+  }
+}
+@media (min-width: 1486px) {
+  .product__description-text {
+    height: 7rem;
+  }
+}
+@media (min-width: 1686px) {
+  .header__container {
+    padding: 0 25rem;
+  }
+  .first-block__body {
+    padding: 14.9rem 25rem 5.6rem;
+  }
+  .first-block__title {
+    width: 73.8rem;
+  }
+  .brend-block__container {
+    padding: 8rem 25rem 0;
+  }
+  .product-block__container {
+    padding: 8rem 25rem 0;
+  }
+  .form-block__form-container {
+    padding: 0 25rem 6.2rem;
+  }
+  .footer {
+    padding: 3.2rem 25rem 1.9rem;
+  }
+}
+@media (min-width: 1786px) {
+  .header__container {
+    padding: 0 30rem;
+  }
+  .first-block__body {
+    padding: 14.9rem 30rem 5.6rem;
+  }
+  .first-block__title {
+    width: 73.8rem;
+  }
+  .brend-block__container {
+    padding: 8rem 30rem 0;
+  }
+  .product-block__container {
+    padding: 8rem 30rem 0;
+  }
+  .form-block__form-container {
+    padding: 0 30rem 6.2rem;
+  }
+  .footer {
+    padding: 3.2rem 30rem 1.9rem;
   }
 }

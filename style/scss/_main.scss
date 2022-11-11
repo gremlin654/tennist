@@ -1,7 +1,7 @@
 .first-block {
   &__container {
     position: relative;
-    background-image: url(./../../image/webp/banner-small.webp);
+    background-image: url(./../../image/webp/banner-320.webp);
     background-position: center;
     background-repeat: no-repeat;
     max-height: 468px;
@@ -180,7 +180,7 @@
 .form-block {
   &__container {
     margin-top: 6.4rem;
-    background: url(./../../image/webp/footer.webp) center no-repeat;
+    background: url(./../../image/webp/girl-320.webp) center no-repeat;
   }
   &__title {
     font-family: 'Montserrat-Bold';
@@ -216,6 +216,9 @@
 }
 
 .form {
+  &__title {
+    display: none;
+  }
   &__textarea-container,
   &__input-name-container,
   &__input-phone-container {

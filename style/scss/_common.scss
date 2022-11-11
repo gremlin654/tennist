@@ -8,5 +8,7 @@ body {
 }
 .wrapper {
   min-height: 100%;
+  max-width: 192rem;
   overflow: hidden;
+  margin: 0 auto;
 }
