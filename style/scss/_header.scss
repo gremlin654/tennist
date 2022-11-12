@@ -7,12 +7,12 @@
   top: 0;
   z-index: 5;
   height: 5.6rem;
-  border-bottom: 0.1rem solid var(--color-blue);
+  border-bottom: 0.1rem solid $colorBlue;
   &.active {
-    background-color: var(--color-blue-dark);
+    background-color: $colorBlueDark;
   }
   &.active-menu-burger {
-    background-color: var(--color-blue-dark);
+    background-color: $colorBlueDark;
     border-bottom: 0;
   }
   &__container {
@@ -49,7 +49,7 @@
   }
   &__contacts-callback {
     @extend %socialHeader;
-    background-color: var(--color-orange);
+    background-color: $colorOrange;
   }
   &__button-callback {
     display: none;
@@ -71,7 +71,7 @@
     font-family: 'Montserrat-Bold';
     font-size: 1.5rem;
     line-height: 2.4rem;
-    color: var(--color-white);
+    color: $colorWhite;
   }
   &__contacts-callback-text,
   &__contacts-telegram-text,
@@ -106,14 +106,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top: 0.1rem solid var(--color-blue);
+    border-top: 0.1rem solid $colorBlue;
     padding: 0;
-    background-color: var(--color-blue-dark);
+    background-color: $colorBlueDark;
   }
   &__link {
     font-family: 'SourceSansPro-SemiBold';
     text-transform: uppercase;
-    color: var(--color-white);
+    color: $colorWhite;
     font-size: 2.4rem;
     line-height: 3.2rem;
   }
@@ -123,7 +123,7 @@
     align-items: center;
     row-gap: 1.6rem;
     padding: 3.9rem 0 3.2rem;
-    background-color: var(--color-blue-dark);
+    background-color: $colorBlueDark;
   }
   &__phone {
     display: flex;
@@ -138,7 +138,7 @@
     font-family: 'SourceSansPro-Bold';
     font-size: 2rem;
     line-height: 3.2rem;
-    color: var(--color-white);
+    color: $colorWhite;
   }
   &__button {
     display: flex;
@@ -146,11 +146,11 @@
     justify-content: center;
     width: 18.5rem;
     height: 4.7rem;
-    background-color: var(--color-orange);
+    background-color: $colorOrange;
     font-family: 'SourceSansPro-Bold';
     font-size: 1.8rem;
     line-height: 2.3rem;
-    color: var(--color-white);
+    color: $colorWhite;
   }
 }
 
@@ -184,7 +184,7 @@
       height: 2px;
       width: 100%;
       transition: all 0.3s ease 0s;
-      background: var(--color-white);
+      background: $colorWhite;
     }
     &::before,
     &::after {
@@ -192,17 +192,17 @@
     }
     &::before {
       top: 0;
-      background: var(--color-white);
+      background: $colorWhite;
     }
     &::after {
       bottom: 0;
-      background: var(--color-white);
+      background: $colorWhite;
     }
     & span {
       padding: 0px;
       top: 50%;
       transform: scale(1) translate(0px, -50%);
-      background: var(--color-white);
+      background: $colorWhite;
     }
     &.active-burger {
       span {
@@ -212,12 +212,12 @@
       &::before {
         top: 50%;
         transform: rotate(45deg) translate(-0.15rem, 0rem);
-        background: var(--color-white);
+        background: $colorWhite;
       }
       &::after {
         bottom: 50%;
         transform: rotate(-45deg) translate(-0.095rem, 0px);
-        background: var(--color-white);
+        background: $colorWhite;
       }
     }
   }

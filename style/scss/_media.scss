@@ -65,6 +65,10 @@
   .brend-block__item-container {
     height: 6.4rem;
     max-width: 27.4rem;
+    & a img {
+      max-width: 23.6rem;
+      max-height: 6.4rem;
+    }
   }
   .header {
     height: 8rem;
@@ -210,7 +214,7 @@
         font-family: 'Montserrat-Regular';
         font-size: 1.4rem;
         line-height: 2.4rem;
-        color: var(--color-white);
+        color: $colorWhite;
       }
       & img {
         width: 2.4rem;
@@ -406,6 +410,8 @@
       order: 2;
       margin: 0;
       column-gap: 1.6rem;
+      flex-basis: 33%;
+      justify-content: end;
     }
     &__phones-container {
       order: 3;
@@ -415,7 +421,6 @@
     &__text {
       order: 4;
       font-size: 2.4rem;
-      margin-top: 2.4rem;
       width: 100%;
     }
     &__text-info {

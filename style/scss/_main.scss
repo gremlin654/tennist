@@ -54,6 +54,9 @@
     width: calc(33.3333333333% - 0.7rem);
     height: 4.4rem;
     background-color: #ffffff;
+    & a img {
+      max-width: 8.1rem;
+    }
   }
 }
 
@@ -63,13 +66,13 @@
     justify-content: space-between;
   }
   &__select {
-    color: var(--color-blue);
+    color: $colorBlue;
     background: transparent;
     &:invalid {
-      color: var(--color-grey);
+      color: $colorGrey;
     }
     & option[value=''] {
-      color: var(--color-grey);
+      color: $colorGrey;
     }
   }
 }
@@ -87,7 +90,7 @@
   &__container {
     display: flex;
     flex-direction: column;
-    background-color: var(--color-white);
+    background-color: $colorWhite;
   }
   &__title {
     font-family: 'Bebas-Neue-bold';
@@ -112,7 +115,7 @@
     font-family: 'Montserrat-Regular';
     font-size: 1.4rem;
     line-height: 2rem;
-    color: var(--color-grey);
+    color: $colorGrey;
   }
   &__status-vector {
     color: green;
@@ -137,7 +140,7 @@
     display: flex;
     column-gap: 0.8rem;
     justify-content: center;
-    color: var(--color-blue);
+    color: $colorBlue;
     margin-top: 1.6rem;
     cursor: pointer;
     & p {
@@ -169,7 +172,7 @@
     line-height: 2rem;
     margin-top: 0.8rem;
     text-align: center;
-    color: var(--color-orange);
+    color: $colorOrange;
   }
   &__callback-button {
     @extend %buttonOrange;
@@ -234,7 +237,7 @@
   &__textarea {
     width: 100%;
     min-height: 11.2rem;
-    background: var(--color-light);
+    background: $colorLight;
     border: 0.1rem solid #cacaca;
     overflow: auto;
   }

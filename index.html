@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" href="./fonts/woff2/Montserrat-Regular.woff2" as="font" crossorigin />
-    <link rel="preload" href="./fonts/woff2/Montserrat-Medium.woff2" as="font" crossorigin />
-    <link rel="preload" href="./fonts/woff2/Montserrat-Bold.woff2" as="font" crossorigin />
-    <link rel="preload" href="./fonts/woff2/SourceSansPro-Regular.woff2" as="font" crossorigin />
-    <link rel="preload" href="./fonts/woff2/SourceSansPro-SemiBold.woff2" as="font" crossorigin />
-    <link rel="preload" href="./fonts/woff2/SourceSansPro-Bold.woff2" as="font" crossorigin />
-    <link rel="preload" href="./fonts/woff2/bebas-neue-bold.woff2" as="font" crossorigin />
+    <link rel="preload" href="./fonts/woff2/Montserrat-Regular.woff2" as="font" crossorigin="" />
+    <link rel="preload" href="./fonts/woff2/Montserrat-Medium.woff2" as="font" crossorigin="" />
+    <link rel="preload" href="./fonts/woff2/Montserrat-Bold.woff2" as="font" crossorigin="" />
+    <link rel="preload" href="./fonts/woff2/SourceSansPro-Regular.woff2" as="font" crossorigin="" />
+    <link
+      rel="preload"
+      href="./fonts/woff2/SourceSansPro-SemiBold.woff2"
+      as="font"
+      crossorigin=""
+    />
+    <link rel="preload" href="./fonts/woff2/SourceSansPro-Bold.woff2" as="font" crossorigin="" />
+    <link rel="preload" href="./fonts/woff2/bebas-neue-bold.woff2" as="font" crossorigin="" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css"
@@ -19,7 +24,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/themes/splide-skyblue.min.css"
     />
-    <link rel="stylesheet" href="./style/css/style.css" />
+    <link rel="stylesheet" href="./style/css/style.min.css" />
     <title>Tennist</title>
   </head>
   <body>
@@ -41,22 +46,22 @@
               <button class="menu__button" data-call="callback">ЗАКАЗАТЬ ЗВОНОК</button>
             </div>
             <li class="menu__item">
-              <a href="#" class="menu__link">Теннисные мячи</a>
+              <a href="#Main" class="menu__link" data-goto="#Main">Теннисные мячи</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">Одежда</a>
+              <a href="#Main" class="menu__link" data-goto="#Main">Одежда</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">Обувь</a>
+              <a href="#Main" class="menu__link" data-goto="#Main">Обувь</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">Главная</a>
+              <a href="#Main" class="menu__link" data-goto="#Main">Главная</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">Доставка и оплата</a>
+              <a href="#Main" class="menu__link" data-goto="#Main">Доставка и оплата</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">Контакты</a>
+              <a href="#Main" class="menu__link" data-goto="#Main">Контакты</a>
             </li>
           </ul>
           <div class="header__logo-container">
@@ -93,7 +98,7 @@
           </div>
         </div>
       </header>
-      <main class="main">
+      <main class="main" id="Main">
         <section class="first-block__container">
           <div class="first-block__body">
             <h1 class="first-block__title">Теннисные мячи из Европы</h1>
@@ -115,7 +120,7 @@
         </section>
         <section class="brend-block__container">
           <div class="brend-block__item-container">
-            <a href="#">
+            <a href="#Product">
               <picture>
                 <source srcset="./image/webp/brend1.webp" type="image/webp" />
                 <img src="./image/png/brend1.png" loading="lazy" alt="image" />
@@ -123,7 +128,7 @@
             </a>
           </div>
           <div class="brend-block__item-container">
-            <a href="#">
+            <a href="#Product">
               <picture>
                 <source srcset="./image/webp/brend3.webp" type="image/webp" />
                 <img src="./image/png/brend3.png" loading="lazy" alt="image" />
@@ -131,7 +136,7 @@
             </a>
           </div>
           <div class="brend-block__item-container">
-            <a href="#">
+            <a href="#Product">
               <picture>
                 <source srcset="./image/webp/brend2.webp" type="image/webp" />
                 <img src="./image/png/brend2.png" loading="lazy" alt="image" />
@@ -139,7 +144,7 @@
             </a>
           </div>
         </section>
-        <section class="product-block__container">
+        <section class="product-block__container" id="Product">
           <div class="sort__container">
             <div class="sort__select-container">
               <select class="sort__select">
@@ -686,5 +691,43 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
     <script src="./js/index.js" type="module"></script>
+
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css"
+    /></noscript>
+
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/themes/splide-skyblue.min.css"
+    /></noscript>
+
+    <noscript><link rel="stylesheet" href="./style/css/style.min.css" /></noscript>
+
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css"
+        media="print"
+        onload="this.media='all'"
+    /></noscript>
+
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/themes/splide-skyblue.min.css"
+        media="print"
+        onload="this.media='all'"
+    /></noscript>
+
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="./style/css/style.min.css"
+        media="print"
+        onload="this.media='all'"
+    /></noscript>
   </body>
 </html>

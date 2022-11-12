@@ -19,7 +19,7 @@
     font-family: 'Bebas-Neue-bold';
     font-size: 2rem;
     line-height: 2.4rem;
-    color: var(--color-white);
+    color: $colorWhite;
     margin-top: 2.4rem;
     text-align: center;
   }
@@ -42,7 +42,7 @@
     font-family: 'Montserrat-Bold';
     font-size: 1.5rem;
     line-height: 2.4rem;
-    color: var(--color-white);
+    color: $colorWhite;
   }
   &__phone-callback {
     @extend %buttonOrange;
@@ -67,11 +67,11 @@
   }
   &__text-info {
     padding-top: 0.8rem;
-    border-top: 0.1rem solid var(--color-blue);
+    border-top: 0.1rem solid $colorBlue;
     font-family: 'Montserrat-Regular';
     font-size: 1.2rem;
     line-height: 1.4rem;
     text-align: center;
-    color: var(--color-white);
+    color: $colorWhite;
   }
 }
